@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.product-gallery {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  margin-top: 8%;
+}
+
+.product_card img {
+  width: 250px;
+}
+.product_card p{
+    text-align: left;
+    margin-left: 15px;
+    font-size: 14px;
+}
