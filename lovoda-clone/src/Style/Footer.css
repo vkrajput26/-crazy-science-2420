@@ -1,0 +1,21 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+.footer_section{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    text-align: left;
+   
+}
+.footer_section p{
+    font-size: 16px;
+}
+.left_section{
+    width: 42%;
+    
+}
+.right_section{
+    width: 42%;
+    
+}
