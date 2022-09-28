@@ -5,10 +5,11 @@
     justify-content: center;
 }
 .left-div{
- 
+   
     width: 40%;
 }
 .right-div{
+    border: 1px solid ;
  
     width: 30%;
 }
@@ -27,27 +28,4 @@
 }
 .checkbox-div{
     margin-top: 0.6rem;
-}
-.ship-adds-div{
-    margin-top: 2rem;
-}
-.address-div{
-    border: 1px solid ;
-    margin-top: 0.6rem;
-    width: 90%;
-    border-radius: 0.4rem;
-    padding-left: 0.6rem;
-}
-.input-addrs{
-    width: 95%;
-    border: none;
-}
-.name-div{
-    display: flex;
-    gap: 1rem;
-}
-.input-name{
-    width: 95%;
-    height: 80%;
-    border: none;
 }
