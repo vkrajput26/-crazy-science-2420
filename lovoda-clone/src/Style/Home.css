@@ -5,10 +5,16 @@
 }
 .Home_section{
     margin-bottom: 5%;
+    
 }
 .image_box {
   position: relative;
   filter: brightness(0.9);
+  
+}
+.image_box img{
+  width: 100%;
+
 }
 .card_box {
   align-items: center;

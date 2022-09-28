@@ -5,6 +5,8 @@
 }
 
 .product-gallery {
+  height: 900px;
+  overflow: hidden;
   width: 85%;
   margin: auto;
   display: grid;
@@ -15,9 +17,16 @@
 
 .product_card img {
   width: 250px;
+  animation-delay: 250ms;
+  transform: scale(0.9);
 }
-.product_card p{
-    text-align: left;
-    margin-left: 15px;
-    font-size: 14px;
+.product_card img:hover {
+  width: 250px;
+  animation-delay: 250ms;
+  transform: scale(1);
+}
+.product_card p {
+  text-align: left;
+  margin-left: 30px;
+  font-size: 12px;
 }
