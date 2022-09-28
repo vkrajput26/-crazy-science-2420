@@ -2,6 +2,7 @@ import React from "react";
 import Earrings from "./HomeEarrings"
 import "../Style/Home.css";
 import Navbar from "../Components/Navbar"
+import Footer from "../Components/Footer";
 const Home = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Home = () => {
       
     </div>
     <Earrings/>
+    <Footer/>
     </>
   );
 };
