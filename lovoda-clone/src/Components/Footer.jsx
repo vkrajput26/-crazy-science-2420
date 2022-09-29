@@ -1,5 +1,6 @@
 import React from "react";
 import "../Style/Footer.css";
+import { Input } from "@chakra-ui/react"; 
 const Footer = () => {
   return (
     <div className="footer_section">
@@ -30,7 +31,7 @@ const Footer = () => {
           <p style={{ fontWeight: "bold" }}>Subscribe to our emails</p>
         </div>
         <p className="inputBox">
-          <input type="text" placeholder="Email" />
+          <Input type="text" placeholder="Email" />
         </p>
       </div>
       <div className="right_section">

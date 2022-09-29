@@ -14,14 +14,16 @@ const Gridsection = () => {
             data&&data.splice(0,noImages).map((item,index)=>{
                 return(
                     <div  key={index}>
-                        <img src={item.image} alt="" />
+                        <img 
+                        
+                        src={item.image} alt="" />
                     </div>
                 )
             })
         }
         
     </div>
-    <Button disabled={noImages>=10} onClick={()=>setnoImages(noImages+noImages)} >Load More</Button>
+    <Button className='gridBtn'  disabled={noImages>=25} onClick={()=>setnoImages(noImages+noImages)} >Load More</Button>
    </>
   )
 }
