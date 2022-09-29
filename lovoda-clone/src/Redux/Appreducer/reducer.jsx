@@ -24,4 +24,4 @@ const reducers=(state=initialState,action)=>{
     }
    
 }
-export default reducers;
+export  {reducers};

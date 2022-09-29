@@ -1,7 +1,7 @@
 import React from "react";
 import "../Style/Navbar.css";
 
-const Navbar = () => {
+const Navbar = () => {  
   return (
     <>
       <div className="Top_Heading">
