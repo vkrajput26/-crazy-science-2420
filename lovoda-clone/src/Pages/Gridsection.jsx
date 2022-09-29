@@ -15,10 +15,11 @@ const Gridsection = () => {
         {
             data&&data.splice(0,noImages).map((item,index)=>{
                 return(
-                    <div  key={index}>
-                        <img 
+                  <div  key={index}>
+                  
+                  <a href={item.srchref}>  <img 
                         
-                        src={item.image} alt="" />
+                        src={item.image} alt="" /></a> 
                     </div>
                 )
             })
