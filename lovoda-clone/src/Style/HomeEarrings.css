@@ -5,7 +5,7 @@
 }
 
 .product-gallery {
-  height: 850px;
+  height: 830px;
   overflow: hidden;
   width: 85%;
   margin: auto;
@@ -18,18 +18,18 @@
 .product_card img {
   width: 250px;
   animation-delay: 250ms;
-  transform: scale(0.9);
+  transform: scale(1);
  
 }
 .product_card img:hover {
   width: 250px;
   animation-delay: 250ms;
   filter: drop-shadow(5px 5px 10px gray);
-  transform: scale(1);
+  transform: scale(1.1);
 }
 .product_card p {
   text-align: left;
-  margin-left: 15px;
+
   font-size: 12px;
 }
 .shopFeed h3{
