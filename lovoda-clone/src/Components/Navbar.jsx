@@ -2,8 +2,7 @@ import React from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {  
-
+const Navbar = () => {
   return (
     <>
       <div className="Top_Heading">
@@ -11,18 +10,24 @@ const Navbar = () => {
       </div>
       <div className="Navbar">
         <div className="Nav">
-          <div className="logo_div">
-            <img
-              className="logo"
-              src={require("../Data/images/10026.jpg")}
-              alt=""
-            />
-          </div>
+          <Link to="/">
+            {" "}
+            <div className="logo_div">
+              <img
+                className="logo"
+                src={require("../Data/images/10026.jpg")}
+                alt=""
+              />
+            </div>
+          </Link>
           <div className="nav_left">
-            <div>Home</div>
-            <Link to="newarrivals">
+            <Link to="/">
+              <div>Home</div>
+            </Link>
+            <Link to="/newarrivals">
               <div>New</div>
             </Link>
+
             <div>Shop All</div>
             <div>Earrings</div>
             <div>Necklaces</div>
