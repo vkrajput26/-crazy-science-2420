@@ -5,18 +5,20 @@
 }
 .footer_section {
   display: flex;
-  width: 85%;
+  width: 100%;
   margin: auto;
   text-align: left;
   border-top: 1px solid darkgray;
   border-bottom: 1px solid darkgray;
 }
+
 .footer_section p {
   font-size: 16px;
 }
 .left_section {
   margin-top: 2%;
   width: 42%;
+  margin: auto;
   margin-bottom: 2%;
 }
 .left_section div:hover {

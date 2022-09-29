@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer_section">
         <div className="left_section">
           <div>
-            <p style={{ fontWeight: "bold" }}>Info</p>
+            <p style={{ fontWeight: "bold",marginTop:"10px" }}>Info</p>
           </div>
 
           <div>
