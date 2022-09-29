@@ -16,10 +16,10 @@ const Earrings = () => {
     <>
       <div className="product-gallery">
         {products &&
-          products.map((item) => {
+          products.map((item,index) => {
             return (
               < >
-                <div className="product_card" key={item.id} >
+                <div className="product_card" key={index} >
                   <div >
                     <img 
                       style={{ cursor: "pointer" }}
