@@ -5,19 +5,21 @@
 }
 .footer_section {
   display: flex;
-  width: 85%;
+  width: 100%;
   margin: auto;
   text-align: left;
   border-top: 1px solid darkgray;
   border-bottom: 1px solid darkgray;
 }
+
 .footer_section p {
   font-size: 16px;
 }
 .left_section {
-  margin-top: 5%;
+  margin-top: 2%;
   width: 42%;
-  margin-bottom: 5%;
+  margin: auto;
+  margin-bottom: 2%;
 }
 .left_section div:hover {
   text-decoration: underline;
@@ -33,4 +35,8 @@
   width: 90%;
   font-size: 16px;
   padding: 10px;
+}
+.paymentoptions img{
+width: 40%;
+margin: auto;
 }

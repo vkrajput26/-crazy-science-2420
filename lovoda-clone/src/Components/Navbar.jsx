@@ -1,9 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
-
-const Navbar = () => {  
-
+import Mobile from "../Pages/Mobile";
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="Top_Heading">
@@ -11,18 +11,24 @@ const Navbar = () => {
       </div>
       <div className="Navbar">
         <div className="Nav">
-          <div className="logo_div">
-            <img
-              className="logo"
-              src={require("../Data/images/10026.jpg")}
-              alt=""
-            />
-          </div>
+          <Link to="/">
+            {" "}
+            <div className="logo_div">
+              <img
+                className="logo"
+                src={require("../Data/images/10026.jpg")}
+                alt=""
+              />
+            </div>
+          </Link>
           <div className="nav_left">
-            <div>Home</div>
-            <Link to="newarrivals">
+            <Link to="/">
+              <div>Home</div>
+            </Link>
+            <Link to="/newarrivals">
               <div>New</div>
             </Link>
+
             <div>Shop All</div>
             <div>Earrings</div>
             <div>Necklaces</div>
@@ -43,6 +49,13 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <div className="mob-menu">
+          <div style={{ color: "black" }} onClick={() => setIsOpen(!isOpen)}>
+            {/* <i class="fi fi-rr-apps  menu_Icon"></i> */}
+            <i class="fi fi-rr-menu-burger "></i>
+          </div>
+          {isOpen && <Mobile isOpen={isOpen} setIsOpen={setIsOpen} />}
+        </div>
     </>
   );
 };
