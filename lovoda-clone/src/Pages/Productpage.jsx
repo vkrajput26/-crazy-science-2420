@@ -34,7 +34,7 @@ const Productpage = () => {
         </div>
         <p>{page}</p>
         <button disabled={page===1} onClick={()=>setPage(page-1)}>PREV</button>
-        <button onClick={()=>setPage(page+1)}>NEXT</button>
+        <button disabled={page>=2}onClick={()=>setPage(page+1)}>NEXT</button>
     </div>
   );
 }
