@@ -2,7 +2,7 @@ import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 import { Button, Flex } from "@chakra-ui/react"
 
 export const Pagination = ({handlePage,page}) => {
-    return (
+    return (   
         <Flex justifyContent={"center"} gap="0.5rem" alignItems={"center"} p="2">
             <Button disabled={page === 1} onClick={handlePage} rightIcon={<ArrowBackIcon
             />} colorScheme='teal' variant='outline'>Prev</Button>
