@@ -15,6 +15,14 @@
 .Grid_BOX img{
     margin-top: 5px;
     width: 95%;
+    
+    transform: scale(0.9);
+}
+.Grid_BOX img:hover{
+    filter: drop-shadow(8px 8px 10px gray);
+    /* transform: rotate(10deg); */
+    /* transform: scale(1); */
+    transform-origin: center top;
 }
 .gridBtn{
     margin: 10px;
