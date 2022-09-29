@@ -1,9 +1,9 @@
 import React from "react";
 import Earrings from "./HomeEarrings";
 import "../Style/Home.css";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 
+import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
@@ -15,7 +15,7 @@ const Home = () => {
         <div className="card_box">
           <h3> NEW NEW NEW</h3>
           <p>Check out the new beauties!</p>
-          <button>Shop all</button>
+         <Link to="/newarrivals"> <button>Shop all</button></Link>
         </div>
       </div>
       <Earrings />

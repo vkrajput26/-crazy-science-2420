@@ -6,6 +6,7 @@ const Gridsection = () => {
     const data=GridData
 
     const [noImages,setnoImages]=useState(8)
+   
   return (
       <>
        <p>Follow us on instagram @lovodashop</p>
