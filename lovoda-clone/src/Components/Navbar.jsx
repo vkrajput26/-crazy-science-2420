@@ -11,18 +11,23 @@ const Navbar = () => {
       </div>
       <div className="Navbar">
         <div className="Nav">
-          <div className="logo_div">
+        <Link to="/">  <div className="logo_div">
             <img
               className="logo"
               src={require("../Data/images/10026.jpg")}
               alt=""
             />
-          </div>
+          </div></Link>
           <div className="nav_left">
+          <Link to="/"><div>Home</div></Link>  
+            <Link to="/newarrivals">
+            <div>New</div></Link>
+
             <div>Home</div>
             <Link to="newarrivals">
               <div>New</div>
             </Link>
+
             <div>Shop All</div>
             <div>Earrings</div>
             <div>Necklaces</div>
