@@ -5,16 +5,19 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
-    width: 80%;
+    width: 85%;
     margin: auto;
-  gap: 2px;
+    gap: 2px;
+}
+.Grid_BOX{
+    margin-top: 20px;
 }
 .Grid_BOX img{
     margin-top: 5px;
-    width: 100%;
+    width: 95%;
 }
 .gridBtn{
-    margin: 5px;
+    margin: 10px;
     text-decoration: underline;
     background: transparent;
 }
