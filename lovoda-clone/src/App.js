@@ -1,27 +1,24 @@
-<<<<<<< HEAD
-import './App.css';
 import Navbar from './Components/Navbar';
-// import AllRoutes from './Pages/AllRoutes';
-import Productpage from './Pages/Productpage';
-=======
+
+// import Productpage from './Pages/Productpage';
+
 
 import "./App.css";
-import CheckoutPg from "./Pages/CheckoutPg";
+// import CheckoutPg from "./Pages/CheckoutPg";
 
-import Home from "./Pages/Home";
->>>>>>> 9f89f7497dece06231177cb3516653d223ab22c9
+// import Home from "./Pages/Home";
+import AllRoutes from './Pages/AllRoutes';
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
+
       <Navbar/>
-      {/* <AllRoutes/> */}
-      <Productpage/>
-=======
-      <Home/>
+      {/* <Productpage/> */}
+
+      <AllRoutes/>
     
->>>>>>> 9f89f7497dece06231177cb3516653d223ab22c9
+
     </div>
   );
 }

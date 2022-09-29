@@ -10,9 +10,9 @@ import { ChakraProvider } from '@chakra-ui/react'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-<<<<<<< HEAD
-  <App />
-=======
+// <<<<<<< HEAD
+  // <App />
+// =======
   <BrowserRouter>
   <Provider store={store}>
   <ChakraProvider>
@@ -21,7 +21,7 @@ root.render(
     </Provider>
     </BrowserRouter>
 
->>>>>>> 9f89f7497dece06231177cb3516653d223ab22c9
+// >>>>>>> 9f89f7497dece06231177cb3516653d223ab22c9
 );
 
 // If you want to start measuring performance in your app, pass a function

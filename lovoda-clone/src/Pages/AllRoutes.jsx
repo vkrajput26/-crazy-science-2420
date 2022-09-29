@@ -5,10 +5,10 @@ import Productpage from './Productpage';
 const AllRoutes = () => {
     return (
         <div>
-            All Routes
-            {/* <Routes>
+            {/* All Routes */}
+            <Routes>
             <Route path='/newarrivals' element={<Productpage />} />
-            </Routes> */}
+            </Routes>
         </div> 
     );
 };
