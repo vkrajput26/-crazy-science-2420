@@ -43,7 +43,7 @@ const Earrings = () => {
       </div>
       <div className="shopFeed">
         <h3>SHOP THE FEED</h3>
-        <p>Tag us on instagram @LovodaShop or #Lovoda</p>
+        <p style={{color:"darkgray" ,marginBottom:"30px"}}>Tag us on instagram @LovodaShop or #Lovoda</p>
       </div>
       <Gridsection/>
     </>
