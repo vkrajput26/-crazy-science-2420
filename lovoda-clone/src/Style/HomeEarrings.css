@@ -5,14 +5,14 @@
 }
 
 .product-gallery {
-  height: 900px;
+  height: 850px;
   overflow: hidden;
   width: 85%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  margin-top: 8%;
+  margin-top: 15%;
 }
 
 .product_card img {
@@ -33,7 +33,7 @@
 @media only screen and (max-width: 720px) {
  
   .product-gallery {
-    height: 900px;
+    height: 850px;
     overflow: hidden;
     width: 85%;
     margin: auto;
