@@ -1,34 +1,29 @@
-import React, { useEffect } from "react";
-
-import { loadGrid } from "../Redux/Appreducer/action";
-import { useDispatch, useSelector } from "react-redux";
-
+import React, { useState } from 'react'
+import "../Style/Gridsection.css"
+import GridData from "../Data/GridData"
+import { Button } from '@chakra-ui/react'
 const Gridsection = () => {
-  let dispatch = useDispatch();
-  const { products } = useSelector((state) => state.products);
-  console.log( "INSIDE GRID SECTION",products);
-  useEffect(() => {
-    dispatch(loadGrid());
-  }, [dispatch]);
+    const data=GridData
 
+    const [noImages,setnoImages]=useState(4)
   return (
       <>
-    <div>
       <p>Follow us on instagram @lovodashop</p>
-    </div>
-    <div className="Grid_BOX">
-        {/* {
-            products&&products.map((item)=>{
+    <div className='Grid_BOX'>
+        {
+            data&&data.splice(0,noImages).map((item,index)=>{
                 return(
-                    <div>
+                    <div  key={index}>
                         <img src={item.image} alt="" />
                     </div>
                 )
             })
-        } */}
+        }
+        
     </div>
-    </>
-  );
-};
+    <Button disabled={noImages>=10} onClick={()=>setnoImages(noImages+noImages)} >Load More</Button>
+   </>
+  )
+}
 
-export default Gridsection;
+export default Gridsection

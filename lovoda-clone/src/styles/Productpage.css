@@ -1,11 +1,13 @@
 .main{
     border : 1px solid red;
-    width : 71%;
+    width : 80%;
     margin : auto;
 }
 .heading1{
-    margin-right: 90%;
+    margin-right: 94%;
+    margin-top: 30px;
     font-weight: normal;
+    font-size: 34px;
 }
 .first-div{
     border: 1px solid black;
@@ -13,7 +15,7 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 4fr));
     gap: 10px;
     justify-items: center; 
-    margin-top: 15px;
+    margin-top: 80px;
 }
 .second-div{
     /* border: 1px solid green; */
@@ -30,6 +32,7 @@
     text-align: left;
     text-decoration: none;
     color: black;
+    margin-top: 12px;
 }
 .para-1 a:hover{
     text-decoration: underline;
@@ -37,5 +40,5 @@
 }
 .para-2{
     text-align: left;
-    margin-top: -5px;
+    margin-top: 8px;
 }

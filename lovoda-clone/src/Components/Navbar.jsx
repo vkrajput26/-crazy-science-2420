@@ -2,12 +2,8 @@ import React from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-// <<<<<<< HEAD
-//     return (
-//         <div>
-//             Navbar
-// =======
+const Navbar = () => {  
+
   return (
     <>
       <div className="Top_Heading">
@@ -24,8 +20,9 @@ const Navbar = () => {
           </div>
           <div className="nav_left">
             <div>Home</div>
-            <Link to="/newarrivals">
-            <div>New</div></Link>
+            <Link to="newarrivals">
+              <div>New</div>
+            </Link>
             <div>Shop All</div>
             <div>Earrings</div>
             <div>Necklaces</div>
@@ -44,7 +41,6 @@ const Navbar = () => {
               <i className="fi fi-rr-shopping-bag"></i>
             </div>
           </div>
-{/* >>>>>>> 9f89f7497dece06231177cb3516653d223ab22c9 */}
         </div>
       </div>
     </>

@@ -16,12 +16,12 @@ const Earrings = () => {
     <>
       <div className="product-gallery">
         {products &&
-          products.map((item) => {
+          products.map((item, index) => {
             return (
-              < >
-                <div className="product_card" key={item.id} >
-                  <div >
-                    <img 
+              <>
+                <div className="product_card" key={index}>
+                  <div>
+                    <img
                       style={{ cursor: "pointer" }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.src = `${item.hoverImage}`)
@@ -33,7 +33,7 @@ const Earrings = () => {
                       alt=""
                     />
 
-                    <p >{item.name}</p>
+                    <p>{item.name}</p>
                     <p style={{ fontWeight: "bold" }}>$ {item.price}.00</p>
                   </div>
                 </div>
