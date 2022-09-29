@@ -7,6 +7,7 @@ import { useState } from 'react';
 const Subtotal = () => {
    const [coupon,setCoupon]=useState()
     const [valueChange,setValueChange]=useState(true)
+    
     let array1=[
         {
             "image": "https://cdn.shopify.com/s/files/1/0627/7388/7215/products/L101102-1_1_533x.jpg?v=1659450226",
@@ -47,7 +48,7 @@ const Subtotal = () => {
         const handleCoupon=()=>{
             if(coupon=="lovoda30%"){
                 setValueChange(false)            
-                // console.log("inside",discount)
+               
             }
             else
             setValueChange(true)
