@@ -15,7 +15,6 @@
     grid-template-columns: repeat(4,1fr); 
     grid-template-rows: auto;
     gap: 0.5rem;
-    /* justify-items: center;  */
     margin-top: 30px;
 }
 .second-div{
