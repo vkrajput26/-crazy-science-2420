@@ -32,3 +32,16 @@
 .gridBtn:hover{
     background-color: lightgreen;
 }
+
+
+@media only screen and (max-width: 720px) { 
+    .Grid_BOX{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        width: 85%;
+        margin: auto;
+   
+    }
+
+}

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .mobile {
+    background-color: white;
+  
+    opacity: 0.9;
+    height: 100vh;
+    width: 60vh;
+    position: absolute;
+    padding: 18px 12px;
+    right: 0px;
+    top: -4px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .close_icon {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+    
+  }
+  
+  .mobile_options {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+  }
+  
+  .mobile_option {
+    font-size: 20px;
+    margin: 12px 0px;
+    display: flex;
+  }
+  
+  .mobile_option a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+  }
