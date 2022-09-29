@@ -1,0 +1,31 @@
+
+
+.main-div{
+    display: flex;
+    justify-content: center;
+}
+.left-div{
+   
+    width: 40%;
+}
+.right-div{
+    border: 1px solid ;
+ 
+    width: 30%;
+}
+.top-section-button{
+    display: flex;
+   justify-content: space-around;
+   width: 70%;
+ 
+   
+}
+
+.logo-img-div{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.6rem;
+}
+.checkbox-div{
+    margin-top: 0.6rem;
+}
