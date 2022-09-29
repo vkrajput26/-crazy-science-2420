@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "../Style/HomeEarrings.css";
 import { loadProduct } from "../Redux/Appreducer/action";
 import { useDispatch, useSelector } from "react-redux";
+import Gridsection from "./Gridsection";
 
 const Earrings = () => {
   let dispatch = useDispatch();
@@ -44,6 +45,7 @@ const Earrings = () => {
         <h3>SHOP THE FEED</h3>
         <p>Tag us on instagram @LovodaShop or #Lovoda</p>
       </div>
+      <Gridsection/>
     </>
   );
 };

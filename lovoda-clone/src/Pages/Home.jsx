@@ -7,7 +7,7 @@ import Footer from "../Components/Footer";
 const Home = () => {
   return (
     <>
-      <Navbar />
+  
       <div className="Home_section">
         <div className="image_box">
           <img src={require("../Data/images/10021.jpg")} alt="" />
