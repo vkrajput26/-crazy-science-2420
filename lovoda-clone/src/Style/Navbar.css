@@ -10,6 +10,7 @@
 }
 .Nav {
   width: 80%;
+  /* border: 1px solid black; */
   margin: auto;
   display: flex;
   align-items: center;
