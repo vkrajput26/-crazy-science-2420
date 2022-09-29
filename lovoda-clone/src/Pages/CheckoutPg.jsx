@@ -7,8 +7,16 @@ import {Input,Box,Button, Breadcrumb,
 
     import { Link } from 'react-router-dom';
 import Subtotal from './Subtotal';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
     
 const CheckoutPg = () => {
+
+    const [address,setAddress]=useState()
+    const user=useSelector((state)=>state.AuthReducer.user)
+   
+    
+
     return (
         <Box display="flex" justifyContent="center" gap="2rem" >
             <Box width="40%" mt="4rem" >
@@ -46,7 +54,7 @@ const CheckoutPg = () => {
                         <Box mt="1rem" display="flex" gap="1rem" >
                             <Image src="https://www.kindpng.com/picc/m/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png" alt="" width="45px" />
                              <Box>
-                             <Heading   as='h6' size='xs'>name </Heading>
+                             <Heading   as='h6' size='xs'>{user} </Heading>
                                 <Heading color="blue.300" fontWeight="light" as='h6' size='xs'>Log out  </Heading>
                                 </Box>   
                         </Box>
@@ -67,7 +75,7 @@ const CheckoutPg = () => {
         </Box>
 
         <Input mt="1rem" placeholder='Company (optional)' size='md' />
-        <Input mt="1rem" placeholder='Address' size='md' />
+        <Input mt="1rem" placeholder='Address' size='md' value={address} onChange={(e)=>setAddress(e.target.value)} />
         <Input mt="1rem" placeholder='Apartment suite etc. (optional)' size='md' />
         
         <Box mt="1rem"  display="flex" gap="1rem" >

@@ -52,7 +52,7 @@ const Shipping = () => {
         <hr />
         <Box display="flex" justifyContent="space-between" mt="0.6rem" mb="0.6rem" pl="0.5rem" pr="0.5rem" borderRadius="12px" >
                 <Heading fontWeight="light" as="h6" size="sm" >Ship to</Heading>
-                <Heading fontWeight="light" as="h6" size="sm" >adress</Heading>
+                <Heading fontWeight="light" as="h6" size="sm" >India</Heading>
                 <Button fontSize="sm" color="blue.400" backgroundColor="white" height="auto" >Change</Button>
             </Box>
           </Box>
@@ -67,7 +67,7 @@ const Shipping = () => {
                     <Box   >
                             <input type="radio" />
                     </Box>
-                        <Box display="flex" gap="24rem"  >
+                        <Box display="flex" gap="20rem"  >
                             <Box >
                             <Heading fontWeight="light" as="h6" size="sm" mr="3.5rem" >Economy</Heading>
                                 <Heading  fontWeight="light" as="h6" size="xs" >5 to 8 business days</Heading>
@@ -81,7 +81,7 @@ const Shipping = () => {
                     <Box   >
                             <input type="radio" />
                     </Box>
-                        <Box display="flex" gap="24rem"  >
+                        <Box display="flex" gap="20rem"  >
                             <Box >
                             <Heading fontWeight="light" as="h6" size="sm"  >USPS Priority Mail</Heading>
                                 <Heading  fontWeight="light" as="h6" size="xs"  >2 business days</Heading>
@@ -95,7 +95,7 @@ const Shipping = () => {
                     <Box   >
                             <input type="radio" />
                     </Box>
-                        <Box display="flex" gap="24rem"  >
+                        <Box display="flex" gap="21rem"  >
                             <Box >
                             <Heading fontWeight="light" as="h6" size="sm" >UPS @ Ground</Heading>
                                 <Heading  fontWeight="light" as="h6" size="xs" >2 business days</Heading>

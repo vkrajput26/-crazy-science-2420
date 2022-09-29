@@ -5,20 +5,17 @@ import {Input,Box,Button, Breadcrumb,
     BreadcrumbSeparator,Heading,Image,Checkbox,Radio,  Alert,
     AlertIcon, } from "@chakra-ui/react"
 
-    import { Link } from 'react-router-dom';
+    import { Link, useNavigate } from 'react-router-dom';
 import Subtotal from './Subtotal';
-const Payment = () => {
 
+const Payment = () => {
+  const navigate=useNavigate()
+  
 
   const handleAlert=()=>{
    
-    alert("Payment Done Successfully")
-//     return <>
-//      <Alert status='success' variant='subtle'>
-//     <AlertIcon />
-//     Data uploaded to the server. Fire on!
-//   </Alert>
-//     </>
+   alert("Payment Done Successfully")
+   
   }
 
     return (
@@ -62,7 +59,7 @@ const Payment = () => {
         <hr />
         <Box display="flex" justifyContent="space-between" mt="0.6rem" mb="0.6rem" pl="0.5rem" pr="0.5rem" borderRadius="12px" >
                 <Heading fontWeight="light" as="h6" size="sm" >Ship to</Heading>
-                <Heading fontWeight="light" as="h6" size="sm" >adress</Heading>
+                <Heading fontWeight="light" as="h6" size="sm" >India</Heading>
                 <Button fontSize="sm" color="blue.400" backgroundColor="white" height="auto" >Change</Button>
             </Box>
          
@@ -106,7 +103,13 @@ const Payment = () => {
                 <Input placeholder='Card number' mt="1rem" backgroundColor="white" />
                 <Input placeholder='Cardholder name' mt="1rem"  backgroundColor="white"/>
                 <Box display="flex" gap="2rem" mt="1rem"  >
-                <Input placeholder='Expiration date (MM/YY)'  backgroundColor="white"/>
+                
+                <Input
+                 backgroundColor="white"
+                        placeholder="Select Date and Time"
+                        size="md"
+                        type="date"
+                        />
                 <Input placeholder='Security code'  backgroundColor="white"/>
                 </Box>
             </Box>
