@@ -1,11 +1,11 @@
 import React from "react";
-import "../Style/Footer.css"
+import "../Style/Footer.css";
 const Footer = () => {
   return (
     <div className="footer_section">
       <div className="left_section">
         <div>
-          <p style={{fontWeight:"bold"}}>Info</p>
+          <p style={{ fontWeight: "bold" }}>Info</p>
         </div>
 
         <div>
@@ -27,25 +27,27 @@ const Footer = () => {
           <p>Shipping</p>
         </div>
         <div>
-          <p  style={{fontWeight:"bold"}}>Subscribe to our emails</p>
+          <p style={{ fontWeight: "bold" }}>Subscribe to our emails</p>
         </div>
-        <div className="inputBox">
+        <p className="inputBox">
           <input type="text" placeholder="Email" />
-        </div>
+        </p>
       </div>
       <div className="right_section">
         <div>
-          <p  style={{fontWeight:"bold"}}>Contact Us!</p>
+          <p style={{ fontWeight: "bold" }}>Contact Us!</p>
         </div>
         <div>
           <p>Need to talk? Reach us via email, phone or text!</p>{" "}
         </div>
         <div>
           {" "}
-          <p  style={{fontWeight:"bold"}}>Email: Customerservice@Lovoda.com</p>
+          <p style={{ fontWeight: "bold" }}>
+            Email: Customerservice@Lovoda.com
+          </p>
         </div>
         <div>
-          <p  style={{fontWeight:"bold"}}>Phone: (443) 500-1200</p>
+          <p style={{ fontWeight: "bold" }}>Phone: (443) 500-1200</p>
         </div>
         <div>
           {" "}

@@ -30,3 +30,17 @@
   margin-left: 30px;
   font-size: 12px;
 }
+@media only screen and (max-width: 720px) {
+ 
+  .product-gallery {
+    height: 900px;
+    overflow: hidden;
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    margin-top: 8%;
+  }
+  
+}
