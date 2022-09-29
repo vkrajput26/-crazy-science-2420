@@ -23,6 +23,7 @@
   filter: grayscale(1);
   margin-top: -20%;
   color: white;
+  font-size: 50px;
 }
 card_box h3 {
   font-size: 30px;
@@ -40,4 +41,5 @@ card_box h3 {
 .card_box button:hover {
   border: 2px solid white;
   cursor: pointer;
+  filter: drop-shadow(8px 8px 10px gray);
 }

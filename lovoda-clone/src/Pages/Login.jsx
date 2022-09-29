@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import { USER_LOGIN_SUCCESS } from '../Redux/Auth/actionTypes';
 import { login } from '../Redux/Auth/action';
 import * as types from "../Redux/Auth/actionTypes";
+import Footer from '../Components/Footer';
 
 
 export const Login = () => {
@@ -66,6 +67,7 @@ export const Login = () => {
   
   }
   return (
+    <>
     <Box mb={100} mt={10}>
     <Center >
         <VStack spacing={10} w="30%">
@@ -146,5 +148,7 @@ export const Login = () => {
     </Center>
 
    </Box>
+   <Footer/>
+   </>
   )
 }
