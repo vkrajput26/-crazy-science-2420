@@ -1,0 +1,45 @@
+.main{
+    /* border : 1px solid green; */
+    width : 80%;
+    margin : auto;
+}
+.heading5{
+    margin-right: 89%;
+    margin-top: 30px;
+    font-weight: lighter;
+    font-size: 34px;
+}
+.first-div{
+    /* border: 1px solid black; */
+    display: grid; 
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: auto;
+    gap: 0.5rem;
+    margin-top: 30px;
+}
+.second-div{
+    /* border: 1px solid red; */
+    height: 470px;
+    width: 100%;
+    cursor: pointer;
+}
+.image{
+    width: 100%; 
+    height: 390px;
+}
+.para-1{
+    font-size: 13px;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    margin-top: 12px;
+}
+.para-1 a:hover{
+    text-decoration: underline;
+    color: black;
+}
+.para-2{
+    font-size: 15px;
+    text-align: left;
+    margin-top: 8px;
+}
