@@ -19,7 +19,7 @@ const Home = () => {
       
     </div>
     <Earrings/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 };

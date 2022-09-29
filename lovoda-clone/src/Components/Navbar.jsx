@@ -2,12 +2,8 @@ import React from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-// <<<<<<< HEAD
-//     return (
-//         <div>
-//             Navbar
-// =======
+const Navbar = () => {  
+
   return (
     <>
       <div className="Top_Heading">
