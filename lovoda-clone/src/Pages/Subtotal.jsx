@@ -33,7 +33,7 @@ const Subtotal = () => {
             "id": 5
           },
     ]
-    console.log(array1)
+   
 
  
         // adding price
