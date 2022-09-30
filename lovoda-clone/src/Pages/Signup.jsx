@@ -5,7 +5,7 @@ import {FaAmazon, FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { SignUp } from '../Redux/Auth/action';
+import { FacebookSignup, GoogleSignIn, SignUp } from '../Redux/Auth/action';
 import { USER_SIGNUP_FAILURE, USER_SIGNUP_REQUEST } from '../Redux/Auth/actionTypes';
 import * as types from "../Redux/Auth/actionTypes"
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -20,11 +20,11 @@ export const Signup = () => {
     const dispatch=useDispatch();
     const toast = useToast();
     const navigate=useNavigate();
-    const user=useSelector((state)=>state.AuthReducer.user)
-// const {user,isAuthError,ErrorMsg}=useSelector((state)=>{
-//   return {user:state.user,ErrorMsg:state.ErrorMsg,isAuthError:state.isAuthError}
+    // const user=useSelector((state)=>state.AuthReducer.user)
+// const {user,isAuthError,ErrorMsg}=useSelector(state=>{
+//   return {user:state.AuthReducer.user,ErrorMsg:state.AuthReducer.ErrorMsg,isAuthError:state.AuthReducer.isAuthError}
 // })
-    console.log("amol",user)
+//     console.log("amol",user)
 const submitUser=async(e)=>{
 e.preventDefault();
 if(Fname===""||Lname===""|| email===""||password===""){
@@ -70,6 +70,80 @@ if(Fname===""||Lname===""|| email===""||password===""){
 }
 }
 
+
+const faceBookLogin = () => {
+  // FacebookSignup
+  dispatch(FacebookSignup())
+    .then((userCredential) => {
+      // Signed in
+      const userDetails = userCredential.user;
+      console.log(userDetails);
+      toast({
+        title: `Your Successfully Logged in,your current email is ${userDetails.email}  `,
+        status: "success",
+        position: "top",
+        duration: 3000,
+        isClosable: true,
+      });
+      navigate("/account");
+      return dispatch({
+        type: types.USER_LOGIN_SUCCESS,
+        payload: userDetails.email,
+      });
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      toast({
+        title: `${errorMessage}  `,
+        status: "error",
+        position: "top",
+        duration: 3000,
+        isClosable: true,
+      });
+      return dispatch({
+        type: types.USER_LOGIN_FAILURE,
+        payload: errorMessage,
+      });
+    });
+};
+const signInWithGoogle = async () => {
+  dispatch(GoogleSignIn())
+    .then((userCredential) => {
+      // Signed in
+      const userDetails = userCredential.user;
+      console.log(userDetails);
+      toast({
+        title: `Your Successfully Logged in,your current email is ${userDetails.email}  `,
+        status: "success",
+        position: "top",
+        duration: 3000,
+        isClosable: true,
+      });
+      navigate("/account");
+      return dispatch({
+        type: types.USER_LOGIN_SUCCESS,
+        payload: userDetails.email,
+      });
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      toast({
+        title: `${errorMessage}  `,
+        status: "error",
+        position: "top",
+        duration: 3000,
+        isClosable: true,
+      });
+      return dispatch({
+        type: types.USER_LOGIN_FAILURE,
+        payload: errorMessage,
+      });
+    });
+};
  return (
    <Box mb={100} mt={10}>
     <Center >
@@ -79,19 +153,19 @@ if(Fname===""||Lname===""|| email===""||password===""){
     <Text mb={5} align="center" fontSize="40px">
 Create account
 </Text>
-<Box  w="100%" h="45px" border="2px solid #1877f2">
+<Box cursor="pointer" onClick={faceBookLogin} w="100%" h="45px" border="2px solid #1877f2">
     <Flex ml={10} h="100%" alignItems="center">
   <FaFacebook color='#1877f2' size="30px" />
   <Text color='#1877f2' ml={4}>Continue with Facebook</Text>
   </Flex>
 </Box>
-<Box w="100%" h="45px" boxShadow='dark-lg'  >
+<Box w="100%" h="45px" boxShadow='dark-lg' cursor="pointer" onClick={signInWithGoogle} >
     <Flex ml={10} h="100%" alignItems="center">
   <FcGoogle color='#1877f2' size="30px" />
   <Text  ml={20}>Google</Text>
   </Flex>
 </Box>
-<Box w="100%" h="45px" bg="#ffa100"  >
+<Box w="100%" h="45px" bg="#ffa100" cursor="pointer" onClick={signInWithGoogle} >
     <Flex ml={10} h="100%" alignItems="center">
   <FaAmazon color='white' size="30px" />
   <Text color="white"  ml={20}>Amazon</Text>
@@ -151,8 +225,11 @@ Create account
      h="45px"
      
      />
-  <Text mt={2} display="inline-block">  Subscribe for Newsletter</Text> 
-      <Checkbox  ml={2} mt={3} border="1px solid black" borderRadius={3} colorScheme='blue'  />
+     <Flex mt={3} alignItems="center">
+     <Text  align="left" display="inline-block">  Subscribe for Newsletter</Text> 
+      <Checkbox  ml={2}  border="1px solid black" borderRadius={3} colorScheme='blue'  />
+     </Flex>
+ 
      
    <Input onClick={submitUser}  display="block"  cursor="pointer" h={50} borderRadius={1} m="auto" type="submit" bg="black" w="30%" mt={8} color="white" value="Create" />
    
