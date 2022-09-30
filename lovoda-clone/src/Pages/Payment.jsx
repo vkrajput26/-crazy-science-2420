@@ -4,19 +4,16 @@ import {Input,Box,Button, Breadcrumb,
     BreadcrumbLink,
     BreadcrumbSeparator,Heading,Image,Checkbox,Radio,  Alert,
     AlertIcon, } from "@chakra-ui/react"
+    import { useToast } from '@chakra-ui/react'
 
     import { Link, useNavigate } from 'react-router-dom';
 import Subtotal from './Subtotal';
 
 const Payment = () => {
   const navigate=useNavigate()
-  
+  const toast = useToast()
 
-  const handleAlert=()=>{
-   
-   alert("Payment Done Successfully")
-   
-  }
+ 
 
     return (
         <Box display="flex" justifyContent="center" gap="2rem" >
@@ -186,7 +183,17 @@ const Payment = () => {
         </Link>
     
     <Link to="/payment" >
-    <Button fontSize="sm" colorScheme='black' backgroundColor="black" variant='solid' onClick={handleAlert} >
+    <Button fontSize="sm" colorScheme='black' backgroundColor="black" variant='solid' onClick={() =>
+        toast({
+          title: 'Payment Done Successfully',
+        
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+           position: "top",
+        })
+       
+        } >
             pay now
     </Button>
     </Link>
