@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.InputDiv {
+  height: 120px;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.InputBox {
+  width: 100%;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.fi-rr-cross-small {
+  font-size: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
