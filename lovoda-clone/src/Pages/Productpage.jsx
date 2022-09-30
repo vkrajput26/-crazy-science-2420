@@ -68,7 +68,7 @@ const Productpage = () => {
             {/* Sorting Starts */}
             <Flex my="1.5rem"  fontSize={"sm"} >
                 <Flex  w="50%" alignItems={"center"} ml="1rem">
-                    <Text mr="1rem">Filter :</Text>
+                    <Text ml="-13px" mr="1rem">Filter :</Text>
                     <Popover>
                     <PopoverTrigger>
                         <Text _hover={{cursor:"pointer"}}>Price<ChevronDownIcon /> </Text>
@@ -91,13 +91,14 @@ const Productpage = () => {
                 <Flex  w="50%" alignItems={"center"} justifyContent="flex-end">
                     <Text mr="1rem">Sort By:</Text>
                     <Select w="40%" onChange={handleChange} >
-                        <option  value="">Sr No</option>
+                        <option  value="">Featured</option>
                         <option  value="name_ASC">Alphabetically A-Z</option>
                         <option value="name_DESC">Alphabetically Z-A</option>
                         <option  value = "price_ASC">Price Low to High</option>
                         <option  value = "price_DESC">Price High to Low</option>
                     </Select>
                 </Flex>
+                <Flex w="10%" mt="5px" ml="20px" fontSize="large">463 products</Flex>
             </Flex>
             {/* Products */}
             <Box mb="2" fontSize={"sm"}>
