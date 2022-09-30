@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  height: 110px;
   margin-top: 5px;
   justify-content: space-evenly;
   border-bottom: 1px solid rgb(199, 199, 199);
@@ -23,7 +24,7 @@
   align-items: center;
 }
 .logo {
-  width: 95px;
+  width: 100px;
   align-items: center;
 }
 
@@ -32,7 +33,7 @@
   width: 60%;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 14px;
+  color: rgb(91, 90, 90);
   margin-right: 20%;
 }
 .nav_left div:hover {
@@ -45,7 +46,7 @@
   width: 15%;
   align-items: center;
   margin-top: 10px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .nav_right div:hover {
   font-size: 20px;
@@ -56,9 +57,9 @@
 } */
 .Top_Heading p {
   display: flex;
-  font-size: 13px;
+  font-size: 16px;
   align-items: center;
-  height: 40px;
+  height: 50px;
   border: 1px solid rgb(199, 199, 199);
   justify-content: center;
 }
