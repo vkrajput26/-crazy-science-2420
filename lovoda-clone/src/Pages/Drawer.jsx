@@ -23,20 +23,23 @@ function PlacementExample() {
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">
-          
-          </DrawerHeader>
+          <DrawerHeader borderBottomWidth="1px"></DrawerHeader>
           <DrawerBody>
-          <Link to="/">  <p>Home</p></Link>
+            <i onClick={onClose} className="fi fi-rr-cross-small"></i>
+            <Link to="/">
+              {" "}
+              <p>Home</p>
+            </Link>
             <p>New</p>
             <p>Shop All</p>
             <p>Earing</p>
             <p>Necklaces</p>
             <p>Bracelets</p>
             <p>Rings</p>
-            <Link to="/shopsocial">  <p>Shop social</p> </Link>
-            
-     
+            <Link to="/shopsocial">
+              {" "}
+              <p>Shop social</p>{" "}
+            </Link>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
