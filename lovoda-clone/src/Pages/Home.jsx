@@ -21,6 +21,7 @@ const Home = () => {
       <Earrings />
  
       {/* <Footer /> */}
+     
    
     </>
   );
