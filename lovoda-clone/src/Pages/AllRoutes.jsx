@@ -13,16 +13,12 @@ import Earrings from './Earrings';
 import Necklaces from './Necklaces';
 import Bracelets from './Bracelets';
 import Shopsocial from './Shopsocial';
+import Rings from './Rings';
 
 const AllRoutes = () => {
     return (
         <div>
              <Routes>
-
-
-   
-  
-
                 <Route path='/' element={<Home/>} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/signup' element={<Signup />} />
@@ -31,10 +27,11 @@ const AllRoutes = () => {
                 <Route path='/shipping' element={<Shipping />} />
                 <Route path='/payment' element={<Payment />} />
                 <Route path='/newarrivals' element={<Productpage  />} />
-                <Route path='/rings' element={<ShopAll/>} />
+                <Route path='/ShopAll' element={<ShopAll/>} />
                 <Route path='/earrings' element={<Earrings/>} />
-                <Route path='/necklace' element={<Necklaces/>} />
-                <Route path='/bracelet' element={<Bracelets/>} />
+                <Route path='/necklaces' element={<Necklaces/>} />
+                <Route path='/bracelets' element={<Bracelets/>} />
+                <Route path='/rings' element={<Rings/>} />
                 <Route path='/shopsocial' element={<Shopsocial/>}/>
             </Routes>
 
