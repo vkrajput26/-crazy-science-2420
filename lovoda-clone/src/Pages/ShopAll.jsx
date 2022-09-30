@@ -2,7 +2,6 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Box, Flex, Grid, GridItem, Heading, Input, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Select, Spinner, Text } from "@chakra-ui/react";
 import { useEffect,useState } from "react"; 
 import { useSearchParams } from "react-router-dom";
-import Footer from "../Components/Footer";
 import { Pagination } from "../Components/Pagination";
 import "../styles/ShopAll.css";
 
