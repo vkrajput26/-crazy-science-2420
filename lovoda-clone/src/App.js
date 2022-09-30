@@ -27,7 +27,7 @@ function App() {
       {/* <Productpage/> */}
 
       <AllRoutes/>
-    
+    <Footer />
 
     </div>
   );

@@ -1,10 +1,16 @@
 import * as types from "./actionTypes"
 import axios from "axios";
 import{createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,signOut,
-    onAuthStateChanged} from "firebase/auth";
+    signInWithEmailAndPassword,signOut,GoogleAuthProvider,signInWithPopup,sendPasswordResetEmail,
+    onAuthStateChanged,FacebookAuthProvider} from "firebase/auth";
 import {auth} from "../../firebase"  
 import { useToast } from "@chakra-ui/react";
+
+
+export const passwordReset=(email)=>dispatch=>{
+    // alert("akjk")
+return sendPasswordResetEmail(auth,email);
+}
 
 export const login=(email,password)=>dispatch=>{
     dispatch({type:types.USER_LOGIN_REQUEST});
@@ -54,6 +60,18 @@ export const SignUp=(Fname,Lname, email,password)=>dispatch=>{
 
 
 export const LogOut=(payload)=>dispatch=>{
-    dispatch({type:types.USER_LOGIN_FAILURE});
-    return dispatch({type:types.USER_LOGIN_FAILURE})
+    
+    return signOut(auth)
+}
+
+export const GoogleSignIn=()=>dispatch=>{
+    dispatch({type:types.USER_LOGIN_REQUEST});
+    const GoogleAuth=new GoogleAuthProvider();
+return signInWithPopup(auth,GoogleAuth)
+}
+
+export const FacebookSignup=()=>dispatch=>{
+    dispatch({type:types.USER_LOGIN_REQUEST});
+    const provider = new FacebookAuthProvider();
+    return signInWithPopup(auth,provider)
 }

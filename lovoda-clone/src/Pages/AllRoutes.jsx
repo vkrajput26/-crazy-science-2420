@@ -5,6 +5,7 @@ import { Login } from './Login';
 import { Signup } from './Signup';
 
 import Productpage from './Productpage';
+import { Account } from './Account';
 
 const AllRoutes = () => {
     return (
@@ -13,7 +14,7 @@ const AllRoutes = () => {
 <Route path='/' element={<Home />} />
 <Route path='/login' element={<Login />} />
 <Route path='/signup' element={<Signup />} />
-{/* <Route path='/newarivals' element={<Signup />} /> */}
+<Route path='/account' element={<Account />} />
 
     </Routes>
   

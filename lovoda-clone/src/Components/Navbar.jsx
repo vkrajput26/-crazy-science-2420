@@ -1,9 +1,12 @@
 import React from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {  
-
+  const isAuth=useSelector((state)=>state.AuthReducer.isAuth
+    )
+        console.log("amol",isAuth)
   return (
     <>
       <div className="Top_Heading">
@@ -33,9 +36,10 @@ const Navbar = () => {
             <div>
               <i className="fi fi-rr-search"></i>
             </div>
-            <div>
+           <Link to={isAuth===true?"/account":"/login"}> <div>
               <i className="fi fi-rr-user"></i>
             </div>
+            </Link>
             <div>
               <i className="fi fi-rr-shopping-bag"></i>
             </div>
