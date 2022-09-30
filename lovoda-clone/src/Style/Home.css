@@ -43,3 +43,16 @@ card_box h3 {
   cursor: pointer;
   filter: drop-shadow(8px 8px 10px gray);
 }
+@media only screen and (max-width:720px){
+
+  .card_box {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    filter: grayscale(1);
+    margin-top: -35%;
+    color: white;
+    font-size: 40px;
+  }
+
+}

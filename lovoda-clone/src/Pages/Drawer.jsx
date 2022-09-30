@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Drawer,
   DrawerBody,
@@ -26,9 +27,16 @@ function PlacementExample() {
           
           </DrawerHeader>
           <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+          <Link to="/">  <p>Home</p></Link>
+            <p>New</p>
+            <p>Shop All</p>
+            <p>Earing</p>
+            <p>Necklaces</p>
+            <p>Bracelets</p>
+            <p>Rings</p>
+            <p>Shop social</p>
+            
+     
           </DrawerBody>
         </DrawerContent>
       </Drawer>
