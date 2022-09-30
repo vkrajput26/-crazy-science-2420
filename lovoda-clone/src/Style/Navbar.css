@@ -13,7 +13,9 @@
   border-bottom: 1px solid rgb(199, 199, 199);
   /* position: fixed;
   z-index: 1;
-  background-color: white; */
+  background-color: white;
+  top: 0;
+  left: 0; */
 }
 
 .Nav {
@@ -92,3 +94,4 @@
     width: 22%;
   }
 }
+
