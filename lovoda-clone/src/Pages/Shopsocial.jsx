@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../Style/Gridsection.css";
 import GridData from "../Data/GridData";
 import { Button } from "@chakra-ui/react";
-const Gridsection = () => {
+const Shopsocial = () => {
   const data = GridData;
 
   const [noImages, setnoImages] = useState(8);
@@ -10,11 +10,11 @@ const Gridsection = () => {
 
   const handleLoad = () => {
     setnoImages(noImages + noImages);
-  
   };
 
   return (
     <>
+    <h2 style={{fontSize:"50px",margin:"20px"}} >Shop Our Instagram</h2>
       <p>Follow us on instagram @lovodashop</p>
       <div className="Grid_BOX">
         {data &&
@@ -32,7 +32,6 @@ const Gridsection = () => {
       <Button
         className="gridBtn"
         disabled={noImages >= 25}
-        
         onClick={handleLoad}
       >
         Load More
@@ -41,4 +40,4 @@ const Gridsection = () => {
   );
 };
 
-export default Gridsection;
+export default Shopsocial;

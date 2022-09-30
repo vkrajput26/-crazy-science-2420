@@ -34,7 +34,7 @@ function PlacementExample() {
             <p>Necklaces</p>
             <p>Bracelets</p>
             <p>Rings</p>
-            <p>Shop social</p>
+            <Link to="/shopsocial">  <p>Shop social</p> </Link>
             
      
           </DrawerBody>

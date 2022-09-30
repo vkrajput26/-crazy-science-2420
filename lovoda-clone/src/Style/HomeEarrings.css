@@ -5,8 +5,8 @@
 }
 
 .product-gallery {
-  height: 1040px;
-  overflow: hidden;
+  height: 1025px;
+  overflow: scroll;
   width: 80%;
   margin: auto;
   display: grid;
@@ -42,7 +42,7 @@
  
   .product-gallery {
     height: 750px;
-    overflow: hidden;
+    overflow: scroll;
     width: 85%;
     margin: auto;
     display: grid;
