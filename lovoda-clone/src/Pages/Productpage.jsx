@@ -107,7 +107,7 @@ const Productpage = () => {
                     {data.map((item) => (
                         <GridItem className="second-div" key={item.id}>
                             <img className='image' onMouseEnter={e => (e.currentTarget.src = `${item.hoverImage}`)} onMouseLeave={e => (e.currentTarget.src = `${item.image}`)} src={item.image} alt="img"/>
-                            <p className="para-1"><a href="/">{item.name}</a></p>
+                            <p className="para-1"><a href="/ProductpageDetail">{item.name}</a></p>
                             <p className="para-2">${item.price}.00</p>
                         </GridItem>
                     ))}

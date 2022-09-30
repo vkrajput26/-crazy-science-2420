@@ -14,6 +14,7 @@ import Necklaces from './Necklaces';
 import Bracelets from './Bracelets';
 import Shopsocial from './Shopsocial';
 import Rings from './Rings';
+import DetailedEarrings from '../DetailPage/ProductpageDetail';
 
 const AllRoutes = () => {
     return (
@@ -33,6 +34,7 @@ const AllRoutes = () => {
                 <Route path='/bracelets' element={<Bracelets/>} />
                 <Route path='/rings' element={<Rings/>} />
                 <Route path='/shopsocial' element={<Shopsocial/>}/>
+                <Route path='/ProductpageDetail' element={<DetailedEarrings/>}/>
             </Routes>
 
         </div>
