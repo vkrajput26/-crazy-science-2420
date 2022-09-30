@@ -40,7 +40,7 @@
 @media only screen and (max-width: 720px) {
  
   .product-gallery {
-    height: 850px;
+    height: 830px;
     overflow: hidden;
     width: 85%;
     margin: auto;

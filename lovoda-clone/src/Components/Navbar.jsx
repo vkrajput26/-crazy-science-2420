@@ -1,22 +1,28 @@
-import React,{useState} from "react";
+import React from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
-
+import PlacementExample from "../Pages/Drawer";
 import { useSelector } from "react-redux";
-import Mobile from "../Pages/Mobile";
-import Mobile from "../Pages/Mobile";
+
+// import Mobile from "../Pages/Mobile";
+
 const Navbar = () => {  
-  const [isOpen, setIsOpen] = useState(false);
+ 
   const isAuth=useSelector((state)=>state.AuthReducer.isAuth)
         console.log("amol",isAuth)
 
 
   return (
     <>
+    
       <div className="Top_Heading">
         <p>Free Shipping on Orders Over $75 and Free Returns (US ONLY)</p>
       </div>
       <div className="Navbar">
+      <div className="DrawerOption">
+      <PlacementExample/>
+      </div>
+      
         <div className="Nav">
           <Link to="/">
             {" "}
@@ -57,13 +63,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="mob-menu">
-          <div style={{ color: "black" }} onClick={() => setIsOpen(!isOpen)}>
-            {/* <i class="fi fi-rr-apps  menu_Icon"></i> */}
-            <i class="fi fi-rr-menu-burger "></i>
-          </div>
-          {isOpen && <Mobile isOpen={isOpen} setIsOpen={setIsOpen} />}
-        </div>
+      
     </>
   );
 };
