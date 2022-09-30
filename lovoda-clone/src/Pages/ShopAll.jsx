@@ -116,7 +116,6 @@ const ShopAll = () => {
             </Box>
             <Pagination handlePage={handlePage} page={page} />
         </Box>
-        <Footer/>
         </>
     );
 };
