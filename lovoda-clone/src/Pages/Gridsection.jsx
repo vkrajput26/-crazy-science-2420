@@ -7,7 +7,7 @@ const Gridsection = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    return axios
+    axios
       .get("https://safe-badlands-27546.herokuapp.com/Gridsection")
       .then((res) => {
         setData(res.data);
@@ -15,7 +15,7 @@ const Gridsection = () => {
       .catch((Err) => {
         console.log(Error);
       });
-  }, [setData]);
+  }, []);
 
   console.log(data);
 
