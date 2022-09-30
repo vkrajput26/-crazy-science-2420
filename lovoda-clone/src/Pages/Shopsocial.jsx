@@ -1,12 +1,26 @@
-import React, { useState } from "react";
-import "../Style/Gridsection.css";
-import GridData from "../Data/GridData";
 import { Button } from "@chakra-ui/react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import "../Style/Gridsection.css";
+
+
 const Shopsocial = () => {
-  const data = GridData;
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://safe-badlands-27546.herokuapp.com/Gridsection")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((Err) => {
+        console.log(Error);
+      });
+  }, []);
+
+  console.log(data);
 
   const [noImages, setnoImages] = useState(8);
-  
 
   const handleLoad = () => {
     setnoImages(noImages + noImages);
@@ -14,7 +28,6 @@ const Shopsocial = () => {
 
   return (
     <>
-    <h2 style={{fontSize:"50px",margin:"20px"}} >Shop Our Instagram</h2>
       <p>Follow us on instagram @lovodashop</p>
       <div className="Grid_BOX">
         {data &&
