@@ -45,7 +45,7 @@
   width: 15%;
   align-items: center;
   margin-top: 10px;
-  justify-content: center;
+  justify-content: space-between;
 }
 .nav_right div:hover {
   font-size: 20px;
@@ -84,5 +84,10 @@
 
   .nav_left {
     display: none;
+  }
+  .logo {
+    margin: auto;
+
+    width: 22%;
   }
 }
