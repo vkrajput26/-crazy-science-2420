@@ -63,13 +63,12 @@
   justify-content: center;
 }
 @media only screen and (min-width: 720px) {
-  .DrawerOption{
+  .DrawerOption {
     display: none;
   }
 }
 @media only screen and (max-width: 720px) {
-
-  .DrawerOption{
+  .DrawerOption {
     margin-left: 10px;
     font-size: 25px;
     display: flex;
@@ -78,13 +77,12 @@
   }
 
   .Nav {
-   position: relative;
-    justify-content: space-between;
+    position: relative;
+    justify-content: center;
     align-items: center;
   }
- 
+
   .nav_left {
     display: none;
   }
-  
 }
