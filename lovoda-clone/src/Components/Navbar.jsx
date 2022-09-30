@@ -47,7 +47,7 @@ const Navbar = () => {
             <div>Necklaces</div>
             <div>Bracelets</div>
             <div>Rings</div>
-            <div>Shop social</div>
+           <Link to="/shopsocial"> <div>Shop social</div></Link>
           </div>
           <div className="nav_right">
             <div>
