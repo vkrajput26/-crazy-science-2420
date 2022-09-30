@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../Style/Gridsection.css";
 import GridData from "../Data/GridData";
 import { Button } from "@chakra-ui/react";
@@ -8,11 +8,13 @@ const Gridsection = () => {
   const [noImages, setnoImages] = useState(8);
   
 
+
   const handleLoad = () => {
     setnoImages(noImages + noImages);
-  
+ 
   };
 
+ 
   return (
     <>
       <p>Follow us on instagram @lovodashop</p>
