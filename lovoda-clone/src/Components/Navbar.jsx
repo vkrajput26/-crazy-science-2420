@@ -42,10 +42,9 @@ const Navbar = () => {
             <Link to="/necklaces"><div>Necklaces</div></Link>
             <Link to="/bracelets"><div>Bracelets</div></Link>
             <Link to="/rings"><div>Rings</div></Link>
-            <Link to="/shopsocial"> <div>Shop social</div></Link>
+            <Link to="/shopsocial"><div>Shop social</div></Link>
 
 
-            
             <Link to="/shopsocial">
               {" "}
               <div>Shop social</div>
