@@ -30,6 +30,7 @@ import {
   passwordReset,
 } from "../Redux/Auth/action";
 import * as types from "../Redux/Auth/actionTypes";
+import Footer from '../Components/Footer';
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -188,6 +189,7 @@ export const Login = () => {
   };
 
   return (
+    <>
     <Box mb={100} mt={10}>
       <Center>
         <VStack spacing={10} w="30%">
@@ -293,5 +295,7 @@ export const Login = () => {
         </VStack>
       </Center>
     </Box>
+    </>
   );
-};
+}
+

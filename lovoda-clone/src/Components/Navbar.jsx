@@ -1,12 +1,18 @@
-import React from "react";
+import React,{useState} from "react";
 import "../Style/Navbar.css";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 
+import { useSelector } from "react-redux";
+import Mobile from "../Pages/Mobile";
 const Navbar = () => {  
-  const isAuth=useSelector((state)=>state.AuthReducer.isAuth
-    )
+  const [isOpen, setIsOpen] = useState(false);
+  const isAuth=useSelector((state)=>state.AuthReducer.isAuth)
         console.log("amol",isAuth)
+
+
+
+
+
   return (
     <>
       <div className="Top_Heading">
@@ -14,17 +20,24 @@ const Navbar = () => {
       </div>
       <div className="Navbar">
         <div className="Nav">
-          <div className="logo_div">
-            <img
-              className="logo"
-              src={require("../Data/images/10026.jpg")}
-              alt=""
-            />
-          </div>
+          <Link to="/">
+            {" "}
+            <div className="logo_div">
+              <img
+                className="logo"
+                src={require("../Data/images/10026.jpg")}
+                alt=""
+              />
+            </div>
+          </Link>
           <div className="nav_left">
-            <div>Home</div>
+            <Link to="/">
+              <div>Home</div>
+            </Link>
             <Link to="/newarrivals">
-            <div>New</div></Link>
+              <div>New</div>
+            </Link>
+
             <div>Shop All</div>
             <div>Earrings</div>
             <div>Necklaces</div>
@@ -44,9 +57,15 @@ const Navbar = () => {
               <i className="fi fi-rr-shopping-bag"></i>
             </div>
           </div>
-{/* >>>>>>> 9f89f7497dece06231177cb3516653d223ab22c9 */}
         </div>
       </div>
+      <div className="mob-menu">
+          <div style={{ color: "black" }} onClick={() => setIsOpen(!isOpen)}>
+            {/* <i class="fi fi-rr-apps  menu_Icon"></i> */}
+            <i class="fi fi-rr-menu-burger "></i>
+          </div>
+          {isOpen && <Mobile isOpen={isOpen} setIsOpen={setIsOpen} />}
+        </div>
     </>
   );
 };

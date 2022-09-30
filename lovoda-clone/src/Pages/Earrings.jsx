@@ -3,9 +3,9 @@ import { Box, Flex, Grid, GridItem, Heading, Input, Popover, PopoverArrow, Popov
 import { useEffect,useState } from "react"; 
 import { useSearchParams } from "react-router-dom";
 import { Pagination } from "../Components/Pagination";
-import "../styles/Productpage.css";
+import "../styles/Earrings.css";
 
-const Productpage = () => {
+const Earrings = () => {
     const [data, setData] = useState([]);
     const [isLoading,setLoading] = useState(false);
     const [searchParam,setSearchParam]=useSearchParams();
@@ -17,7 +17,7 @@ const Productpage = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://lovodaapi.herokuapp.com/api/newarrivals?_page=${page}&_limit=16&_sort=${sort}&_order=${order}&price_gte=${greater}&price_lte=${less}`)
+        fetch(`https://lovodaapi.herokuapp.com/api/earrings?_page=${page}&_limit=16&_sort=${sort}&_order=${order}&price_gte=${greater}&price_lte=${less}`)
             .then((res) => res.json())
             .then((res)=>{
                 setData(res) ;
@@ -64,7 +64,7 @@ const Productpage = () => {
 
     return (
         <Box className="main">
-            <Heading className="heading1" fontWeight={"400"} fontSize={"4xl"}>New</Heading>
+            <Heading className="heading3" fontWeight={"400"} fontSize={"4xl"}>Earrings</Heading>
             {/* Sorting Starts */}
             <Flex my="1.5rem"  fontSize={"sm"} >
                 <Flex  w="50%" alignItems={"center"} ml="1rem">
@@ -117,4 +117,4 @@ const Productpage = () => {
     );
 };
 
-export default Productpage;
+export default Earrings;

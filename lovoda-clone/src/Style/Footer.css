@@ -1,21 +1,42 @@
-*{
-    margin: 0;padding: 0;box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.footer_section{
-    display: flex;
-    width: 85%;
-    margin: auto;
-    text-align: left;
-   
+.footer_section {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+  border-top: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
 }
-.footer_section p{
-    font-size: 16px;
+
+.footer_section p {
+  font-size: 16px;
 }
-.left_section{
-    width: 42%;
-    
+.left_section {
+  margin-top: 2%;
+  width: 42%;
+  margin: auto;
+  margin-bottom: 2%;
 }
-.right_section{
-    width: 42%;
-    
+.left_section div:hover {
+  text-decoration: underline;
+  width: max-content;
+  cursor: pointer;
+}
+.right_section {
+  margin-top: 5%;
+  width: 42%;
+  margin-bottom: 5%;
+}
+.inputBox input {
+  width: 90%;
+  font-size: 16px;
+  padding: 10px;
+}
+.paymentoptions img{
+width: 40%;
+margin: auto;
 }
