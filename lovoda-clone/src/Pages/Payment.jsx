@@ -6,11 +6,11 @@ import {Input,Box,Button, Breadcrumb,
     AlertIcon, } from "@chakra-ui/react"
     import { useToast } from '@chakra-ui/react'
 
-    import { Link, useNavigate } from 'react-router-dom';
+    import { Link } from 'react-router-dom';
 import Subtotal from './Subtotal';
 
 const Payment = () => {
-  const navigate=useNavigate()
+ 
   const toast = useToast()
 
  

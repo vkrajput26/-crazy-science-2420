@@ -22,7 +22,7 @@ const navigate=useNavigate()
     const {cart }= useSelector(state=>
    { return{cart:state.CartReducer.cart}}
     );
-
+   console.log("vk")
     // console.log(    "cart dtata",products,"count,",totalQty);
 
     useEffect(() => {
@@ -81,9 +81,9 @@ const addTocart=()=>{
                             <Box mt="1.5rem">
                                 <Text textAlign={"left"} fontSize={"md"} >Quantity</Text>
                                 <Flex alignItems={"center"} mt="0.3rem" border="1px solid " w="40%" justifyContent={"center"}>
-                                    <Button variant={"ghost"} disabled={quantity ===1} onClick={() => setQuantity((prev) => prev-1)} _hover={{cursor:"pointer"}}  mr="-3"><MinusIcon  h={3} w={3} /></Button>
+                                    <Button variant={"ghost"} disabled={quantity ===1} onClick={() => setQuantity(quantity-1)} _hover={{cursor:"pointer"}}  mr="-3"><MinusIcon  h={3} w={3} /></Button>
                                     <Box _hover={{cursor:"pointer"}}  px="3" py="2" mr="-2"><Text ml={1} mr={1} fontSize={"md"}>{quantity}</Text></Box>
-                                    <Button variant={"ghost"} onClick={() => setQuantity((prev) => prev+1)} _hover={{cursor:"pointer"}} px="3"py="2" mr="3"><AddIcon h={3} w={3} /></Button>
+                                    <Button variant={"ghost"} onClick={() => setQuantity(quantity+1)} _hover={{cursor:"pointer"}} px="3"py="2" mr="3"><AddIcon h={3} w={3} /></Button>
                                 </Flex>
                             </Box>  
 

@@ -8,13 +8,16 @@ import {FaCcPaypal,FaGooglePay} from "react-icons/fa"
 export const CartPage = () => {
 
     const dispatch=useDispatch()
-    const [quantity, setQuantity] = useState(1);
+   
     const {cart,products,totalQty,totalPrice }= useSelector(state=>
         { return{cart:state.CartReducer.cart,products:state.CartReducer.products,
             totalQty:state.CartReducer.totalQty,totalPrice:state.CartReducer.totalPrice}}
          );
          const [data,setData]=useState([])
-        
+
+         console.log("products",products)
+         console.log("totalQty",totalQty)
+         console.log("totalPrice",totalPrice)
 
 const RemoveItem=(item,p)=>{
     let price=totalPrice-p;
@@ -61,13 +64,13 @@ useEffect(() => {
             <Box w="30%" >
                 <Flex alignItems={"center"}>
             <Flex ml={10} alignItems={"center"} mt="0.3rem" border="1px solid " p="0px 10px" justifyContent={"center"}>
-                                    <Button variant={"ghost"} disabled={quantity ===1} onClick={() => setQuantity((prev) => prev-1)} _hover={{cursor:"pointer"}}  mr="-3"><MinusIcon  h={3} w={3} /></Button>
-                                    <Box _hover={{cursor:"pointer"}}  px="3" py="2" mr="-2"><Text ml={1} mr={1} fontSize={"md"}>{totalQty}</Text></Box>
-                                    <Button variant={"ghost"} onClick={() => increment(item.id)} _hover={{cursor:"pointer"}} px="3"py="2" mr="3"><AddIcon h={3} w={3} /></Button>
+                                    <Button variant={"ghost"}  onClick={() => dispatch({type:"DECREAMENT", payload:item.id}) } _hover={{cursor:"pointer"}}  mr="-3"><MinusIcon  h={3} w={3} /></Button>
+                                    <Box _hover={{cursor:"pointer"}}  px="3" py="2" mr="-2"><Text ml={1} mr={1} fontSize={"md"}>{item.quantity}</Text></Box>
+                                    <Button variant={"ghost"} onClick={() => dispatch({type:"ICREAMENT", payload:item.id})} _hover={{cursor:"pointer"}} px="3"py="2" mr="3"><AddIcon h={3} w={3} /></Button>
                                 </Flex> <DeleteIcon  onClick={()=>RemoveItem(item.id,item.price)} cursor="pointer" ml={8} /></Flex>
                                
             </Box>
-            <Box > <Text  fontSize={"13px"} align={"left"}>${item.price}.00</Text>
+            <Box > <Text  fontSize={"13px"} align={"left"}>${item.price*item.quantity}.00</Text>
          </Box>
         </Flex>
     </Box>
