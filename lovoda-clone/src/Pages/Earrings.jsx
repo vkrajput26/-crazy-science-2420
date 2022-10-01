@@ -5,6 +5,24 @@ import { useDispatch } from "react-redux";
 import { Link, useSearchParams } from "react-router-dom";
 import { Pagination } from "../Components/Pagination";
 import "../styles/Earrings.css";
+import { useMediaQuery } from "react-responsive";
+
+const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 992 });
+    return isDesktop ? children : null;
+  };
+  const Tablet = ({ children }) => {
+    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
+    return isTablet ? children : null;
+  };
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    return isMobile ? children : null;
+  };
+  const Default = ({ children }) => {
+    const isNotMobile = useMediaQuery({ minWidth: 768 });
+    return isNotMobile ? children : null;
+  };
 
 const Earrings = () => {
     const [data, setData] = useState([]);
@@ -71,6 +89,8 @@ const Earrings = () => {
     };
 
     return (
+        <>
+        <Desktop>
         <Box className="main">
             <Heading className="heading3" fontWeight={"400"} fontSize={"4xl"}>Earrings</Heading>
             {/* Sorting Starts */}
@@ -125,6 +145,123 @@ const Earrings = () => {
             </Box>
             <Pagination handlePage={handlePage} page={page} />
         </Box>
+        </Desktop>
+
+        <Tablet> 
+        <Box w={"90%"} m="auto" mt={"2rem"} mb={5}>
+            <Heading className="heading3" fontWeight={"400"} fontSize={"4xl"}>Earrings</Heading>
+            {/* Sorting Starts */}
+            <Flex my="1.5rem"  fontSize={"sm"} >
+                <Flex  w="50%" alignItems={"center"} ml="1rem">
+                    <Text ml="-13px" mr="1rem">Filter :</Text>
+                    <Popover>
+                    <PopoverTrigger>
+                        <Text _hover={{cursor:"pointer"}}>Price<ChevronDownIcon /> </Text>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                        <PopoverArrow />
+                        <PopoverCloseButton />
+                        <PopoverHeader>Highest Price is $40</PopoverHeader>
+                        <PopoverBody>
+                        <Flex alignItems="center" justifyContent="space-evenly" >
+                        <Text>From $</Text>
+                        <Input onChange={(e)=>setGreater(e.target.value)} w="30%"/>
+                        <Text>To $</Text>
+                        <Input onChange={(e)=>setLess(e.target.value)} w="30%"/>
+                        </Flex>
+                        </PopoverBody>
+                    </PopoverContent>
+                    </Popover>
+                </Flex>
+                <Flex  w="50%" alignItems={"center"} justifyContent="flex-end">
+                    <Text mr="1rem">Sort By:</Text>
+                    <Select w="40%" onChange={handleChange} >
+                        <option  value="">Featured</option>
+                        <option  value="name_ASC">Alphabetically A-Z</option>
+                        <option value="name_DESC">Alphabetically Z-A</option>
+                        <option  value = "price_ASC">Price Low to High</option>
+                        <option  value = "price_DESC">Price High to Low</option>
+                    </Select>
+                </Flex>
+                <Flex w="10%" mt="5px" ml="20px" fontSize="large">856 products</Flex>
+            </Flex>
+            {/* Products */}
+            <Box mb="2" fontSize={"sm"}>
+                {isLoading && <Flex justify={"center"}><Spinner thickness='4px' speed='0.65s' emptyColor='gray.200' color='blue.500'size='xl'/></Flex>}
+                <Grid className="first-div">
+                    {data.map((item) => (
+                        <Link to={`/ProductpageDetail/${item.id}`}>
+                        <GridItem onClick={handleId} className="second-div" key={item.id}>
+                            <img className='image' onMouseEnter={e => (e.currentTarget.src = `${item.hoverImage}`)} onMouseLeave={e => (e.currentTarget.src = `${item.image}`)} src={item.image} alt="img"/>
+                            <p className="para-1"><a href="/">{item.name}</a></p>
+                            <p className="para-2">${item.price}.00</p>
+                        </GridItem>
+                        </Link>
+                    ))}
+                </Grid>
+            </Box>
+            <Pagination handlePage={handlePage} page={page} />
+        </Box>
+        </Tablet>
+
+        <Mobile>
+        <Box className="main">
+            <Heading className="heading3" fontWeight={"400"} fontSize={"4xl"}>Earrings</Heading>
+            {/* Sorting Starts */}
+            <Flex my="1.5rem"  fontSize={"sm"} >
+                <Flex  w="50%" alignItems={"center"} ml="1rem">
+                    <Text ml="-13px" mr="1rem">Filter :</Text>
+                    <Popover>
+                    <PopoverTrigger>
+                        <Text _hover={{cursor:"pointer"}}>Price<ChevronDownIcon /> </Text>
+                    </PopoverTrigger>
+                    <PopoverContent>
+                        <PopoverArrow />
+                        <PopoverCloseButton />
+                        <PopoverHeader>Highest Price is $40</PopoverHeader>
+                        <PopoverBody>
+                        <Flex alignItems="center" justifyContent="space-evenly" >
+                        <Text>From $</Text>
+                        <Input onChange={(e)=>setGreater(e.target.value)} w="30%"/>
+                        <Text>To $</Text>
+                        <Input onChange={(e)=>setLess(e.target.value)} w="30%"/>
+                        </Flex>
+                        </PopoverBody>
+                    </PopoverContent>
+                    </Popover>
+                </Flex>
+                <Flex  w="50%" alignItems={"center"} justifyContent="flex-end">
+                    <Text mr="1rem">Sort By:</Text>
+                    <Select w="40%" onChange={handleChange} >
+                        <option  value="">Featured</option>
+                        <option  value="name_ASC">Alphabetically A-Z</option>
+                        <option value="name_DESC">Alphabetically Z-A</option>
+                        <option  value = "price_ASC">Price Low to High</option>
+                        <option  value = "price_DESC">Price High to Low</option>
+                    </Select>
+                </Flex>
+                <Flex w="10%" mt="5px" ml="20px" fontSize="large">856 products</Flex>
+            </Flex>
+            {/* Products */}
+            <Box mb="2" fontSize={"sm"}>
+                {isLoading && <Flex justify={"center"}><Spinner thickness='4px' speed='0.65s' emptyColor='gray.200' color='blue.500'size='xl'/></Flex>}
+                <Grid className="first-div">
+                    {data.map((item) => (
+                        <Link to={`/ProductpageDetail/${item.id}`}>
+                        <GridItem onClick={handleId} className="second-div" key={item.id}>
+                            <img className='image' onMouseEnter={e => (e.currentTarget.src = `${item.hoverImage}`)} onMouseLeave={e => (e.currentTarget.src = `${item.image}`)} src={item.image} alt="img"/>
+                            <p className="para-1"><a href="/">{item.name}</a></p>
+                            <p className="para-2">${item.price}.00</p>
+                        </GridItem>
+                        </Link>
+                    ))}
+                </Grid>
+            </Box>
+            <Pagination handlePage={handlePage} page={page} />
+        </Box>
+        </Mobile>
+        
+        </>
     );
 };
 
