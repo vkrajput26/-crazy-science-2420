@@ -31,6 +31,25 @@ import {
 } from "../Redux/Auth/action";
 import * as types from "../Redux/Auth/actionTypes";
 import Footer from '../Components/Footer';
+import { useMediaQuery } from 'react-responsive'
+import "../App.css";
+
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 992 })
+  return isDesktop ? children : null
+}
+const Tablet = ({ children }) => {
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+  return isTablet ? children : null
+}
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+  return isMobile ? children : null
+}
+const Default = ({ children }) => {
+  const isNotMobile = useMediaQuery({ minWidth: 768 })
+  return isNotMobile ? children : null
+}
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -190,7 +209,7 @@ export const Login = () => {
 
   return (
     <>
-    <Box mb={100} mt={10}>
+    <Desktop> <Box mb={100} mt={10}>
       <Center>
         <VStack spacing={10} w="30%">
           <Box w="100%">
@@ -266,6 +285,7 @@ export const Login = () => {
 
               <Input
                 onClick={HandleSubmit}
+                className='create_btn'
                 display="block"
                 cursor="pointer"
                 h={50}
@@ -294,7 +314,223 @@ export const Login = () => {
           </Box>
         </VStack>
       </Center>
+    </Box></Desktop>
+    <Tablet> <Box mb={100} mt={10}>
+      <Center>
+        <VStack spacing={10} w="60%">
+          <Box w="100%">
+            <VStack spacing={5} w="100%">
+              <Text mb={5} align="center" fontSize="40px">
+                Login
+              </Text>
+              <Box w="100%" h="45px" border="2px solid #1877f2" cursor="pointer" onClick={faceBookLogin}>
+                <Flex ml={10} h="100%" alignItems="center">
+                  <FaFacebook color="#1877f2" size="30px" />
+                  <Text color="#1877f2" ml={4}>
+                    Continue with Facebook
+                  </Text>
+                </Flex>
+              </Box>
+              <Box
+                onClick={signInWithGoogle}
+                cursor="pointer"
+                w="100%"
+                h="45px"
+                boxShadow="dark-lg"
+              >
+                <Flex ml={10} h="100%" alignItems="center">
+                  <FcGoogle color="#1877f2" size="30px" />
+                  <Text ml={10}>Google</Text>
+                </Flex>
+              </Box>
+              <Box  onClick={signInWithGoogle}
+                cursor="pointer" w="100%" h="45px" bg="#ffa100">
+                <Flex ml={10} h="100%" alignItems="center">
+                  <FaAmazon color="white" size="30px" />
+                  <Text color="white" ml={10}>
+                    Amazon
+                  </Text>
+                </Flex>
+              </Box>
+            </VStack>
+          </Box>
+          <Box w="100%">
+            <FormControl>
+              {/* <FormLabel>Email</FormLabel> */}
+
+              <Input
+                focusBorderColor="black"
+                mt={5}
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                borderRadius={1}
+                placeholder="Email"
+                color="black"
+                h="45px"
+              />
+              <Input
+                mt={5}
+                focusBorderColor="black"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                borderRadius={1}
+                placeholder="Password"
+                color="black"
+                h="45px"
+              />
+              <Flex onClick={ResetPassword} mt={2}>
+                <Text
+                  borderBottom="1px solid black"
+                  _hover={{ color: "blue", borderBottom: "1px solid blue" }}
+                >
+                  Forgot your password?{" "}
+                </Text>
+              </Flex>
+
+              <Input
+                onClick={HandleSubmit}
+                className='create_btn'
+                display="block"
+                cursor="pointer"
+                h={50}
+                borderRadius={1}
+                m="auto"
+                type="submit"
+                bg="black"
+                w="30%"
+                mt={8}
+                color="white"
+                value="Sign in"
+              />
+
+              <Flex justifyContent="center" mt={5}>
+                <Link to="/signup">
+                  {" "}
+                  <Text
+                    borderBottom="1px solid black"
+                    _hover={{ color: "blue", borderBottom: "1px solid blue" }}
+                  >
+                    Create account{" "}
+                  </Text>{" "}
+                </Link>
+              </Flex>
+            </FormControl>
+          </Box>
+        </VStack>
+      </Center>
+    </Box></Tablet>
+    <Mobile>
+    <Box mb={100} mt={10}>
+      <Center>
+        <VStack spacing={10} w="80%">
+          <Box w="100%">
+            <VStack spacing={5} w="100%">
+              <Text mb={5} align="center" fontSize="30px">
+                Login
+              </Text>
+              <Box w="100%" h="45px" border="2px solid #1877f2" cursor="pointer" onClick={faceBookLogin}>
+                <Flex ml={5} h="100%" alignItems="center">
+                  <FaFacebook color="#1877f2" size="30px" />
+                  <Text color="#1877f2" fontSize="14px" ml={4}>
+                    Continue with Facebook
+                  </Text>
+                </Flex>
+              </Box>
+              <Box
+                onClick={signInWithGoogle}
+                cursor="pointer"
+                w="100%"
+                h="45px"
+                boxShadow="dark-lg"
+              >
+                <Flex ml={5} h="100%" alignItems="center">
+                  <FcGoogle color="#1877f2" size="30px" />
+                  <Text ml={10} fontSize="14px">Google</Text>
+                </Flex>
+              </Box>
+              <Box  onClick={signInWithGoogle}
+                cursor="pointer" w="100%" h="45px" bg="#ffa100">
+                <Flex ml={5} h="100%" alignItems="center">
+                  <FaAmazon color="white" size="30px" />
+                  <Text color="white" ml={10} fontSize="14px">
+                    Amazon
+                  </Text>
+                </Flex>
+              </Box>
+            </VStack>
+          </Box>
+          <Box w="100%">
+            <FormControl>
+              {/* <FormLabel>Email</FormLabel> */}
+
+              <Input
+                focusBorderColor="black"
+                mt={5}
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                borderRadius={1}
+                placeholder="Email"
+                color="black"
+                h="45px"
+              />
+              <Input
+                mt={5}
+                focusBorderColor="black"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                borderRadius={1}
+                placeholder="Password"
+                color="black"
+                h="45px"
+              />
+              <Flex onClick={ResetPassword} mt={2}>
+                <Text
+                  borderBottom="1px solid black"
+                  _hover={{ color: "blue", borderBottom: "1px solid blue" }}
+                >
+                  Forgot your password?{" "}
+                </Text>
+              </Flex>
+
+              <Input
+                onClick={HandleSubmit}
+                display="block"
+                cursor="pointer"
+                className='create_btn'
+                h={50}
+                borderRadius={1}
+                m="auto"
+                type="submit"
+                bg="black"
+                w="30%"
+                mt={8}
+                color="white"
+                value="Sign in"
+              />
+
+              <Flex justifyContent="center" mt={5}>
+                <Link to="/signup">
+                  {" "}
+                  <Text
+                    borderBottom="1px solid black"
+                    _hover={{ color: "blue", borderBottom: "1px solid blue" }}
+                  >
+                    Create account{" "}
+                  </Text>{" "}
+                </Link>
+              </Flex>
+            </FormControl>
+          </Box>
+        </VStack>
+      </Center>
     </Box>
+    </Mobile>
+   
+   
 
     </>
   );

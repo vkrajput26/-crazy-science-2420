@@ -12,14 +12,25 @@ import ShopAll from './ShopAll';
 import Earrings from './Earrings';
 import Necklaces from './Necklaces';
 import Bracelets from './Bracelets';
+
+import { CustomerReviews } from './CustomerReviews';
+
 import Shopsocial from './Shopsocial';
 import Rings from './Rings';
 import DetailedEarrings from '../DetailPage/ProductpageDetail';
+
 
 const AllRoutes = () => {
     return (
         <div>
              <Routes>
+
+
+
+   
+<Route path='/CustomerReviews' element={<CustomerReviews /> } />
+
+
                 <Route path='/' element={<Home/>} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/signup' element={<Signup />} />
@@ -28,7 +39,12 @@ const AllRoutes = () => {
                 <Route path='/shipping' element={<Shipping />} />
                 <Route path='/payment' element={<Payment />} />
                 <Route path='/newarrivals' element={<Productpage  />} />
+
+                <Route path='/rings' element={<ShopAll/>} />
+                
+
                 <Route path='/ShopAll' element={<ShopAll/>} />
+
                 <Route path='/earrings' element={<Earrings/>} />
                 <Route path='/necklaces' element={<Necklaces/>} />
                 <Route path='/bracelets' element={<Bracelets/>} />

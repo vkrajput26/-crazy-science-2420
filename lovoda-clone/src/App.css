@@ -13,6 +13,14 @@
   }
 }
 
+.create_btn{
+  transition: transform 0.5s linear;
+}
+.create_btn:hover{
+  transform: scale(1.1);
+
+    transition: 0.5s ease-in;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

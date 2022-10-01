@@ -1,0 +1,37 @@
+.btn{
+    position: fixed;
+    left: 95vw;
+    bottom: 22vw;
+    height: auto;
+    /* font-size: 1rem; */
+  /* font-weight: bold; */
+    z-index: 99;
+    cursor: pointer;
+    width:90px;
+    
+    /* color: white; */
+    /* opacity: 50%; */
+   
+  }
+  .icon{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    text-align: center;
+    /* background-color: rgb(68, 89, 79); */
+   
+  border-radius: 20px;
+  padding:60px 2px;
+  /* padding: 30px 21px; */
+  }
+  .txt{
+    font-size: 15px;
+    font-weight: bold;
+ margin-top: -20px;
+    margin-left: -30px;
+    /* transform-origin: 1 0; */
+    transform: rotate(-90deg);
+    /* line-height: 80px; */
+    /* transform: rotate(-90deg); */
+    /* padding-left: -0px; */
+  }
+
+  
