@@ -6,7 +6,7 @@ import "../Style/Gridsection.css";
 const Gridsection = () => {
 
     
-    const data=GridData
+    // const data=GridData
 
   const [data, setData] = useState([]);
 
