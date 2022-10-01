@@ -3,6 +3,7 @@ const initialState={
     products:[],
     totalPrice:0,
     totalQty:0,
+    cart: {},
 }
 
 export const reducer =(state=initialState, action)=>{
@@ -14,6 +15,11 @@ export const reducer =(state=initialState, action)=>{
                 ...state,
                 products:[...state.products,item],
 
+            }
+        case "CART":
+            return{
+                ...state,
+                cart: action.payload,
             }
             default:
                 return state
