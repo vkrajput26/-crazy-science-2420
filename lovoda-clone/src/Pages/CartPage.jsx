@@ -4,9 +4,10 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 import shopPayicon from "../Data/images/shop_pay.webp";
-import {FaCcPaypal,FaGooglePay} from "react-icons/fa"
+import {FaCcPaypal,FaGooglePay} from "react-icons/fa";
+// import { toggleCartItemQuanitity } from '../Components/toggleCartItemQuanitity';
 export const CartPage = () => {
-
+   
     const dispatch=useDispatch()
    
     const {cart,products,totalQty,totalPrice }= useSelector(state=>
@@ -24,9 +25,24 @@ const RemoveItem=(item,p)=>{
     dispatch({type:"DELETE",payload:{item,price}});
     alert("delete")
     // console.log()
+
+
+
 }
 const increment=(item)=>{
-    dispatch({type:"ICREAMENT",payload:item})
+    dispatch({type:"ICREAMENT",payload:item});
+    // if (value === "inc") {
+    //     setCartItems([...cartItems.slice(0, index), { ...foundProduct, quantity: foundProduct.quantity + 1 }, ...cartItems.slice(index + 1)]);
+      
+    //     setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+    //     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+    //   } else if (value === "dec") {
+    //     if (foundProduct.quantity > 1) {
+    //       setCartItems([...cartItems.slice(0, index), { ...foundProduct, quantity: foundProduct.quantity - 1 }, ...cartItems.slice(index + 1)]);
+        
+    //       setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+    //       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
+    //     }
 }
 useEffect(() => {
     // setLoading(true);
