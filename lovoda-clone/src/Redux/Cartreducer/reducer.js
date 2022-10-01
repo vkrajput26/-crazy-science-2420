@@ -72,7 +72,9 @@ export const reducer =(state=initialState, action)=>{
                   
 
 
-    case "CART":
+
+            case "CART":
+
             return{
                 ...state,
                 cart: action.payload,
