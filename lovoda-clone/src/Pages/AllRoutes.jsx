@@ -18,6 +18,7 @@ import { CustomerReviews } from './CustomerReviews';
 import Shopsocial from './Shopsocial';
 import Rings from './Rings';
 import DetailedEarrings from '../DetailPage/ProductpageDetail';
+import { CartPage } from './CartPage';
 
 
 const AllRoutes = () => {
@@ -29,7 +30,7 @@ const AllRoutes = () => {
 
    
 <Route path='/CustomerReviews' element={<CustomerReviews /> } />
-
+<Route path="/cartpage" element={<CartPage />} />
 
                 <Route path='/' element={<Home/>} />
                 <Route path='/login' element={<Login />} />

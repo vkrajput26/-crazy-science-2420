@@ -1,14 +1,14 @@
 .btn{
     position: fixed;
-    left: 95vw;
-    bottom: 22vw;
+    left: 96vw;
+    bottom: 20vw;
     height: auto;
     /* font-size: 1rem; */
   /* font-weight: bold; */
     z-index: 99;
     cursor: pointer;
-    width:90px;
-    
+    width:70px;
+   
     /* color: white; */
     /* opacity: 50%; */
    
@@ -17,7 +17,7 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     text-align: center;
     /* background-color: rgb(68, 89, 79); */
-   
+    background-color: white;
   border-radius: 20px;
   padding:60px 2px;
   /* padding: 30px 21px; */
@@ -26,12 +26,45 @@
     font-size: 15px;
     font-weight: bold;
  margin-top: -20px;
-    margin-left: -30px;
+    margin-left: -20px;
     /* transform-origin: 1 0; */
     transform: rotate(-90deg);
     /* line-height: 80px; */
     /* transform: rotate(-90deg); */
     /* padding-left: -0px; */
+   
   }
 
+
+  @media only screen and (max-width: 600px) {
+    
+    .btn{
+      left: 92vw;
+      bottom: 70vw;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only all and (min-width: 600px) and (max-width: 900px){
+    .btn{
+      left: 94vw;
+      bottom: 50vw;
+    }
+    /* .btn{
+      position: fixed;
+      left: 92vw;
+      bottom: 100vw;
+      height: auto; */
+      /* font-size: 1rem; */
+    /* font-weight: bold; */
+      /* z-index: 99; */
+      /* cursor: pointer;
+      width:70px; */
+     
+      /* color: white; */
+      /* opacity: 50%; */
+     
+    /* } */
+  }
+  
   

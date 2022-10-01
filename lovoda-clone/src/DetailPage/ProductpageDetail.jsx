@@ -6,22 +6,24 @@ import {BsCart3, BsSuitHeart} from "react-icons/bs";
 import { MyButton } from "./MyButton";
 import { useEffect, useState } from "react";
 import { CustomerReviews } from "../Pages/CustomerReviews";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const DetailedEarrings = () => {
     const [data, setData] = useState({});
     console.log(data);
     const {id}=useParams();
+    const dispatch=useDispatch();
+    // const [cartData,setCartdata]=useState({})
     const [quantity, setQuantity] = useState(1);
     const location = useLocation();
-
-    const cart = useSelector((state)=>
-    state.CartReducer.cart
+const navigate=useNavigate()
+    const {cart }= useSelector(state=>
+   { return{cart:state.CartReducer.cart}}
     );
 
-    console.log(cart);
+    // console.log(    "cart dtata",products,"count,",totalQty);
 
     useEffect(() => {
         axios.get(`https://lovodaapi.herokuapp.com/api/${cart}/${id}`)
@@ -29,7 +31,11 @@ const DetailedEarrings = () => {
             setData(res.data) 
         })
     }, []);
-
+const addTocart=()=>{
+    dispatch({type:"ADD_TO_CART",payload:{data,quantity}})
+    alert("added");
+    navigate("/cartpage")
+}
     return(
         <Box marginTop={"30px"}>
             <Box w="70%" m="auto">
@@ -82,7 +88,7 @@ const DetailedEarrings = () => {
                             </Box>  
 
                             <Flex my="1.5rem" direction="column" gap="0.5rem">
-                                <MyButton task="Add to cart" icon={BsCart3} />
+                                <MyButton addTocart={addTocart} task="Add to cart" icon={BsCart3} />
                                 <MyButton task="Add to wishlist" icon={BsSuitHeart} />
                                 <Button bgColor={"black"} color="white" _hover={{bgColor:"black"}} borderRadius="none" border="1px solid black">Buy it Now</Button> 
                             </Flex>
