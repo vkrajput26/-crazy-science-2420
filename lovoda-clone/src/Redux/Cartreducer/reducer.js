@@ -9,6 +9,10 @@ const initialState={
 }
 
 export const reducer =(state=initialState, action)=>{
+    
+    let findprod;
+    let index;
+
     switch(action.type){
 
         case 'ADD_TO_CART':
@@ -19,7 +23,7 @@ export const reducer =(state=initialState, action)=>{
             }else{
                const total=state.totalPrice+data.price*quantity;
                const totalQ=state.totalQty+quantity;
-
+                data.quantity=quantity;
                 return {
 
                     ...state,
@@ -35,7 +39,39 @@ export const reducer =(state=initialState, action)=>{
                 return{
                     ...state,products:filter,totalPrice:price
                 }
-               
+
+                case "ICREAMENT":
+                    findprod  =state.products.find((data)=>data.id===action.payload)
+                    index=state.products.findIndex((data)=>data.id===action.payload);
+                  
+                    findprod.quantity+=1;
+                    state.products[index]=findprod
+                    return{
+                        ...state,
+                        totalPrice:state.totalPrice +findprod.price,
+                        totalQty:state.totalQty+1
+                    }
+
+
+
+                    case "DECREAMENT":
+                        findprod  =state.products.find((data)=>data.id===action.payload)
+                        index=state.products.findIndex((data)=>data.id===action.payload);
+                        if(findprod.quantity>1){
+                            findprod.quantity  -=1;
+                            state.products[index]=findprod;
+                             return {
+                                ...state,
+                                totalPrice:state.totalPrice -findprod.price,
+                                totalQty:state.totalQty-1
+                             }
+                        }
+                        else {
+                            return state
+                        }
+                  
+
+
             case "CART":
             return{
                 ...state,
