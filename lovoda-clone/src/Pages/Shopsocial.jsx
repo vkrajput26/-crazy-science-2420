@@ -3,11 +3,8 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../Style/Gridsection.css";
 
-const Gridsection = () => {
 
-    
-    const data=GridData
-
+const Shopsocial = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -28,7 +25,6 @@ const Gridsection = () => {
   const handleLoad = () => {
     setnoImages(noImages + noImages);
   };
-
 
   return (
     <>
@@ -57,4 +53,4 @@ const Gridsection = () => {
   );
 };
 
-export default Gridsection;
+export default Shopsocial;

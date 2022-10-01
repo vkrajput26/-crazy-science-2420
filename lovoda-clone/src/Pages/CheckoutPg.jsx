@@ -16,6 +16,7 @@ const CheckoutPg = () => {
 
     const [address,setAddress]=useState()
     const user=useSelector((state)=>state.AuthReducer.user)
+
    const dispatch=useDispatch()
    const navigate=useNavigate();
     const signOutBtn=()=>{
@@ -24,6 +25,11 @@ const CheckoutPg = () => {
           navigate("/")
         })
               }
+
+   
+    const totalPrice=useSelector((state)=>state.CartReducer.totalPrice)
+    console.log("totalPrice",totalPrice)
+
 
     return (
         <Box display="flex" justifyContent="center" gap="2rem" >

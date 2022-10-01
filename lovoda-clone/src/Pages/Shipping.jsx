@@ -9,8 +9,10 @@ import {Input,Box,Button, Breadcrumb,
 
     import { Link } from 'react-router-dom';
 import Subtotal from './Subtotal';
+import { useSelector } from 'react-redux';
 
 const Shipping = () => {
+    const user=useSelector((state)=>state.AuthReducer.user)
     return (
         <Box display="flex" justifyContent="center" gap="2rem" >
         <Box width="40%" mt="4rem" >
@@ -45,7 +47,7 @@ const Shipping = () => {
            <Box border="1px solid grey" mt="2rem"  mb="2rem">
             <Box display="flex" justifyContent="space-between" mt="0.6rem" mb="0.6rem" pl="0.5rem" pr="0.5rem" borderRadius="12px" >
                 <Heading fontWeight="light" as="h6" size="sm" >Contact</Heading>
-                <Heading fontWeight="light" as="h6" size="sm" >email</Heading>
+                <Heading fontWeight="light" as="h6" size="sm" >{user}</Heading>
                 <Button fontSize="sm" color="blue.400" backgroundColor="white" height="auto" >Change</Button>
             </Box>
 
