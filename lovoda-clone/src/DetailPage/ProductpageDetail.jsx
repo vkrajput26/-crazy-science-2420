@@ -31,14 +31,14 @@ const DetailedEarrings = () => {
     }, []);
 
     return(
-        <Box border={"1px solid red"}>
+        <Box marginTop={"30px"}>
             <Box w="70%" m="auto">
                 <Flex>
-                    <Box border={"1px solid green"} w="70%" >
-                        <Image border={"1px solid red"} w={"100%"} src={data.image} />
+                    <Box cursor={"pointer"} w="70%" >
+                        <Image box-shadow= {"rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"} w={"100%"} src={data.image} />
                         <Flex mt="0.5rem" gap="0.5rem">
-                            <Image border={"1px solid red"} w={"49.5%"} src={data.hoverImage}/>
-                            <Image border={"1px solid red"} w={"49.5%"} src={data.image}/>
+                            <Image box-shadow= {"rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"} w={"49.5%"} src={data.hoverImage}/>
+                            <Image box-shadow= {"rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"} w={"49.4%"} src={data.image}/>
                         </Flex>
                     </Box>
 
