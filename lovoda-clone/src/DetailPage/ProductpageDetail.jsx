@@ -37,18 +37,18 @@ const addTocart=()=>{
     navigate("/cartpage")
 }
     return(
-        <Box border={"1px solid red"}>
+        <Box marginTop={"30px"}>
             <Box w="70%" m="auto">
                 <Flex>
-                    <Box border={"1px solid green"} w="65%" >
-                        <Image w={"100%"} src={data.image} />
+                    <Box cursor={"pointer"} w="70%" >
+                        <Image box-shadow= {"rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"} w={"100%"} src={data.image} />
                         <Flex mt="0.5rem" gap="0.5rem">
-                            <Image src={data.hoverImage}/>
-                            <Image src={data.image}/>
+                            <Image box-shadow= {"rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"} w={"49.5%"} src={data.hoverImage}/>
+                            <Image box-shadow= {"rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"} w={"49.4%"} src={data.image}/>
                         </Flex>
                     </Box>
 
-                    <Box p="1rem" pr="0" pos="sticky" top="0" h="600px" w="35%">
+                    <Box p="1.5rem" marginBottom={5} pr="0" pos="sticky" top="0" h="600px" w="35%">
                         <Box>
                             <Text textAlign={"left"} fontSize={"xs"}>LOVODA</Text>
 
@@ -98,24 +98,9 @@ const addTocart=()=>{
 
                 <Box mt={"30px"}>
                     <Box >
-                        <Text mr={"8rem"} fontSize={"18px"}>Free Shipping</Text>
-                        <Text ml={"9rem"} fontSize={"15px"}>Free shipping for orders over $75! Only applicable for US.</Text>
+                        <Text mt={"3rem"} mr={"35rem"} fontSize={"18px"}>Free Shipping</Text>
+                        <Text marginBottom={10} mt={"0.5rem"}  mr={"18rem"} fontSize={"15px"}>Free shipping for orders over $75! Only applicable for US.</Text>
                     </Box>
-                    
-                    {/* <Box>
-                        <Heading color={"grey"} textAlign={"left"} mt={"50px"} fontSize={"15px"} >CUSTOMER REVIEWS</Heading>
-                    </Box> */}
-                    {/* <Box>
-                        <Stack  direction='row' spacing={4} align='center'>
-                            <Button ml={"50rem"} colorScheme='pink' _hover={{bgColor:"pink"}} variant='outline'>Ask a question</Button>
-                            <Button colorScheme='pink' _hover={{bgColor:"pink"}} variant='outline'>Ask a review</Button>
-                        </Stack>
-                    </Box> */}
-                    {/* <Box border={"1px solid black"}>4</Box>
-                    <hr/>
-                    <Box>
-                        <Text mt={"1rem"} textAlign={"left"} fontSize={"15px"}>Be the first to write a review</Text>
-                    </Box> */}
                 </Box>
 
             </Box>
