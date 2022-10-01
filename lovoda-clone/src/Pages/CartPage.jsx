@@ -4,26 +4,45 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 import shopPayicon from "../Data/images/shop_pay.webp";
-import {FaCcPaypal,FaGooglePay} from "react-icons/fa"
+import {FaCcPaypal,FaGooglePay} from "react-icons/fa";
+// import { toggleCartItemQuanitity } from '../Components/toggleCartItemQuanitity';
 export const CartPage = () => {
-
+   
     const dispatch=useDispatch()
-    const [quantity, setQuantity] = useState(1);
+   
     const {cart,products,totalQty,totalPrice }= useSelector(state=>
         { return{cart:state.CartReducer.cart,products:state.CartReducer.products,
             totalQty:state.CartReducer.totalQty,totalPrice:state.CartReducer.totalPrice}}
          );
          const [data,setData]=useState([])
-        
+
+         console.log("products",products)
+         console.log("totalQty",totalQty)
+         console.log("totalPrice",totalPrice)
 
 const RemoveItem=(item,p)=>{
     let price=totalPrice-p;
     dispatch({type:"DELETE",payload:{item,price}});
     alert("delete")
     // console.log()
+
+
+
 }
 const increment=(item)=>{
-    dispatch({type:"ICREAMENT",payload:item})
+    dispatch({type:"ICREAMENT",payload:item});
+    // if (value === "inc") {
+    //     setCartItems([...cartItems.slice(0, index), { ...foundProduct, quantity: foundProduct.quantity + 1 }, ...cartItems.slice(index + 1)]);
+      
+    //     setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+    //     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+    //   } else if (value === "dec") {
+    //     if (foundProduct.quantity > 1) {
+    //       setCartItems([...cartItems.slice(0, index), { ...foundProduct, quantity: foundProduct.quantity - 1 }, ...cartItems.slice(index + 1)]);
+        
+    //       setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+    //       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
+    //     }
 }
 useEffect(() => {
     // setLoading(true);
@@ -61,13 +80,13 @@ useEffect(() => {
             <Box w="30%" >
                 <Flex alignItems={"center"}>
             <Flex ml={10} alignItems={"center"} mt="0.3rem" border="1px solid " p="0px 10px" justifyContent={"center"}>
-                                    <Button variant={"ghost"} disabled={quantity ===1} onClick={() => setQuantity((prev) => prev-1)} _hover={{cursor:"pointer"}}  mr="-3"><MinusIcon  h={3} w={3} /></Button>
-                                    <Box _hover={{cursor:"pointer"}}  px="3" py="2" mr="-2"><Text ml={1} mr={1} fontSize={"md"}>{totalQty}</Text></Box>
-                                    <Button variant={"ghost"} onClick={() => increment(item.id)} _hover={{cursor:"pointer"}} px="3"py="2" mr="3"><AddIcon h={3} w={3} /></Button>
+                                    <Button variant={"ghost"}  onClick={() => dispatch({type:"DECREAMENT", payload:item.id}) } _hover={{cursor:"pointer"}}  mr="-3"><MinusIcon  h={3} w={3} /></Button>
+                                    <Box _hover={{cursor:"pointer"}}  px="3" py="2" mr="-2"><Text ml={1} mr={1} fontSize={"md"}>{item.quantity}</Text></Box>
+                                    <Button variant={"ghost"} onClick={() => dispatch({type:"ICREAMENT", payload:item.id})} _hover={{cursor:"pointer"}} px="3"py="2" mr="3"><AddIcon h={3} w={3} /></Button>
                                 </Flex> <DeleteIcon  onClick={()=>RemoveItem(item.id,item.price)} cursor="pointer" ml={8} /></Flex>
                                
             </Box>
-            <Box > <Text  fontSize={"13px"} align={"left"}>${item.price}.00</Text>
+            <Box > <Text  fontSize={"13px"} align={"left"}>${item.price*item.quantity}.00</Text>
          </Box>
         </Flex>
     </Box>
