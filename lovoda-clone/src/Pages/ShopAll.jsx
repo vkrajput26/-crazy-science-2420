@@ -1,7 +1,8 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Box, Flex, Grid, GridItem, Heading, Input, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Select, Spinner, Text } from "@chakra-ui/react";
 import { useEffect,useState } from "react"; 
-import { useSearchParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useSearchParams } from "react-router-dom";
 import { Pagination } from "../Components/Pagination";
 import "../styles/ShopAll.css";
 
@@ -14,6 +15,13 @@ const ShopAll = () => {
     const [order, setOrder] = useState("");
     const [greater, setGreater] = useState(0);
     const [less,setLess] = useState(50);
+
+    const dispatch = useDispatch();
+    const newarrivals = "rings";
+
+    const handleId = () => {
+        dispatch({type: "CART", payload: newarrivals})
+    }
 
     useEffect(() => {
         setLoading(true);
@@ -106,11 +114,13 @@ const ShopAll = () => {
                 {isLoading && <Flex justify={"center"}><Spinner thickness='4px' speed='0.65s' emptyColor='gray.200' color='blue.500'size='xl'/></Flex>}
                 <Grid className="first-div">
                     {data.map((item) => (
-                        <GridItem className="second-div" key={item.id}>
+                        <Link to={`/ProductpageDetail/${item.id}`}>
+                        <GridItem onClick={handleId} className="second-div" key={item.id}>
                             <img className='image' onMouseEnter={e => (e.currentTarget.src = `${item.hoverImage}`)} onMouseLeave={e => (e.currentTarget.src = `${item.image}`)} src={item.image} alt="img"/>
                             <p className="para-1"><a href="/">{item.name}</a></p>
                             <p className="para-2">${item.price}.00</p>
                         </GridItem>
+                        </Link>
                     ))}
                 </Grid>
             </Box>

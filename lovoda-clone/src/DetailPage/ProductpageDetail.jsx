@@ -42,7 +42,7 @@ const DetailedEarrings = () => {
                         </Flex>
                     </Box>
 
-                    <Box p="1.5rem" pr="0" pos="sticky" top="0" h="600px" w="35%">
+                    <Box p="1.5rem" marginBottom={5} pr="0" pos="sticky" top="0" h="600px" w="35%">
                         <Box>
                             <Text textAlign={"left"} fontSize={"xs"}>LOVODA</Text>
 
@@ -92,8 +92,8 @@ const DetailedEarrings = () => {
 
                 <Box mt={"30px"}>
                     <Box >
-                        <Text mr={"8rem"} fontSize={"18px"}>Free Shipping</Text>
-                        <Text ml={"9rem"} fontSize={"15px"}>Free shipping for orders over $75! Only applicable for US.</Text>
+                        <Text mt={"3rem"} mr={"35rem"} fontSize={"18px"}>Free Shipping</Text>
+                        <Text marginBottom={10} mt={"0.5rem"}  mr={"18rem"} fontSize={"15px"}>Free shipping for orders over $75! Only applicable for US.</Text>
                     </Box>
                 </Box>
 

@@ -35,7 +35,7 @@ export const CustomerReviews = () => {
   return (
     <>
     <Desktop>
-    <Box w="80%" m="auto">
+    <Box w="70%" m="auto">
     <Heading textAlign="left" size="sm">CUSTOMER REVIEWS</Heading>
     <Flex mb={5} justifyContent="right"><Button fontSize="14px" _hover={{backgroundColor:"#c9ac92",color:"white"}} variant="outline" colorScheme="orange" color="#c9ac92" mr={1}>Ask a question</Button>
     <Button  fontSize="14px" _hover={{backgroundColor:"#c9ac92",color:"white"}} variant="outline" colorScheme="orange" color="#c9ac92" >Add a review</Button></Flex>
