@@ -147,7 +147,7 @@ const Earrings = () => {
         </Box>
         </Desktop>
 
-        <Tablet>
+        <Tablet> 
         <Box w={"90%"} m="auto" mt={"2rem"} mb={5}>
             <Heading className="heading3" fontWeight={"400"} fontSize={"4xl"}>Earrings</Heading>
             {/* Sorting Starts */}
