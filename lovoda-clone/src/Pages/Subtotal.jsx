@@ -55,7 +55,7 @@ const Subtotal = () => {
         }
 
     return (
-        <Box width="30%" backgroundColor="rgb(247,247,247)" pl="1rem" pr="1rem">
+        <Box width="30%" backgroundColor="rgb(247,247,247)" pl="1rem" pr="1rem" mt="2rem" mb="2rem">
           
            {/* add to cart data */}
            {
