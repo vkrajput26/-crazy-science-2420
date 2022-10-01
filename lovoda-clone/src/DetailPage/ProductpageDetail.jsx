@@ -34,15 +34,15 @@ const DetailedEarrings = () => {
         <Box border={"1px solid red"}>
             <Box w="70%" m="auto">
                 <Flex>
-                    <Box border={"1px solid green"} w="65%" >
-                        <Image w={"100%"} src={data.image} />
+                    <Box border={"1px solid green"} w="70%" >
+                        <Image border={"1px solid red"} w={"100%"} src={data.image} />
                         <Flex mt="0.5rem" gap="0.5rem">
-                            <Image src={data.hoverImage}/>
-                            <Image src={data.image}/>
+                            <Image border={"1px solid red"} w={"49.5%"} src={data.hoverImage}/>
+                            <Image border={"1px solid red"} w={"49.5%"} src={data.image}/>
                         </Flex>
                     </Box>
 
-                    <Box p="1rem" pr="0" pos="sticky" top="0" h="600px" w="35%">
+                    <Box p="1.5rem" pr="0" pos="sticky" top="0" h="600px" w="35%">
                         <Box>
                             <Text textAlign={"left"} fontSize={"xs"}>LOVODA</Text>
 
@@ -95,21 +95,6 @@ const DetailedEarrings = () => {
                         <Text mr={"8rem"} fontSize={"18px"}>Free Shipping</Text>
                         <Text ml={"9rem"} fontSize={"15px"}>Free shipping for orders over $75! Only applicable for US.</Text>
                     </Box>
-                    
-                    {/* <Box>
-                        <Heading color={"grey"} textAlign={"left"} mt={"50px"} fontSize={"15px"} >CUSTOMER REVIEWS</Heading>
-                    </Box> */}
-                    {/* <Box>
-                        <Stack  direction='row' spacing={4} align='center'>
-                            <Button ml={"50rem"} colorScheme='pink' _hover={{bgColor:"pink"}} variant='outline'>Ask a question</Button>
-                            <Button colorScheme='pink' _hover={{bgColor:"pink"}} variant='outline'>Ask a review</Button>
-                        </Stack>
-                    </Box> */}
-                    {/* <Box border={"1px solid black"}>4</Box>
-                    <hr/>
-                    <Box>
-                        <Text mt={"1rem"} textAlign={"left"} fontSize={"15px"}>Be the first to write a review</Text>
-                    </Box> */}
                 </Box>
 
             </Box>
