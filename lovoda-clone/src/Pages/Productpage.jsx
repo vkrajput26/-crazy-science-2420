@@ -16,6 +16,7 @@ const Productpage = () => {
     const [order, setOrder] = useState("");
     const [greater, setGreater] = useState(0);
     const [less,setLess] = useState(50);
+    
     const dispatch = useDispatch();
     const newarrivals = "newarrivals";
 
