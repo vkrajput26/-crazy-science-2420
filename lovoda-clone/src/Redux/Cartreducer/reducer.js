@@ -5,7 +5,7 @@ const initialState={
     totalQty:0,
     increment:0,
     decreament:0,
-    cart: {},
+    cart: [],
 }
 
 export const reducer =(state=initialState, action)=>{
@@ -35,18 +35,7 @@ export const reducer =(state=initialState, action)=>{
                 return{
                     ...state,products:filter,totalPrice:price
                 }
-                case "ICREAMENT":
-                    const index=state.products.findIndex((p)=>p.id===action.payload);
-                    const fnd=state.products.find((p)=>p.id===action.payload)
-                  fnd.quantity+=1;
-                    state.products[index]=fnd
-                    return{
-                        ...state,totalQty:state.totalQty+1
-                    }
-                    case "DECREAMENT":
-                    return{
-                        ...state,totalQty:state.totalQty-1
-                    }
+               
             case "CART":
             return{
                 ...state,
