@@ -18,6 +18,7 @@ import { CustomerReviews } from './CustomerReviews';
 import Shopsocial from './Shopsocial';
 import Rings from './Rings';
 import DetailedEarrings from '../DetailPage/ProductpageDetail';
+import { CartPage } from './CartPage';
 
 
 const AllRoutes = () => {
@@ -29,7 +30,7 @@ const AllRoutes = () => {
 
    
 <Route path='/CustomerReviews' element={<CustomerReviews /> } />
-
+<Route path="/cartpage" element={<CartPage />} />
 
                 <Route path='/' element={<Home/>} />
                 <Route path='/login' element={<Login />} />
@@ -50,7 +51,7 @@ const AllRoutes = () => {
                 <Route path='/bracelets' element={<Bracelets/>} />
                 <Route path='/rings' element={<Rings/>} />
                 <Route path='/shopsocial' element={<Shopsocial/>}/>
-                <Route path='/ProductpageDetail' element={<DetailedEarrings/>}/>
+                <Route path='/ProductpageDetail/:id' element={<DetailedEarrings/>}/>
             </Routes>
 
         </div>

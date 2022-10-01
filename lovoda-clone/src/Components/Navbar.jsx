@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import PlacementExample from "../Pages/Drawer";
 import { useSelector } from "react-redux";
 import Search from "../Pages/Search";
-// import Mobile from "../Pages/Mobile";
-// import Mobile from "../Pages/Mobile";
+
 const Navbar = () => {  
   const [isOpen, setIsOpen] = useState(false);
   const isAuth=useSelector((state)=>state.AuthReducer.isAuth)

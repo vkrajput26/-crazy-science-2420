@@ -13,7 +13,7 @@ const initialState={
 
 export const reducer=(oldState=initialState,action)=>{
 const {type,payload,admin}=action;
-console.log("signup",payload)
+
 switch(type){
     case types.USER_LOGIN_REQUEST:{
         return{
