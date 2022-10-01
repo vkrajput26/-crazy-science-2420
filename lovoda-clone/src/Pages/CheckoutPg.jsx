@@ -5,17 +5,25 @@ import {Input,Box,Button, Breadcrumb,
     BreadcrumbLink,
     BreadcrumbSeparator,Heading,Image,Checkbox  } from "@chakra-ui/react"
 
-    import { Link } from 'react-router-dom';
+    import { Link, useNavigate } from 'react-router-dom';
 import Subtotal from './Subtotal';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
+import { LogOut } from '../Redux/Auth/action';
+import * as types from "../Redux/Auth/actionTypes"
     
 const CheckoutPg = () => {
 
     const [address,setAddress]=useState()
     const user=useSelector((state)=>state.AuthReducer.user)
-   
-    
+   const dispatch=useDispatch()
+   const navigate=useNavigate();
+    const signOutBtn=()=>{
+        dispatch(LogOut()).then(r=>{
+          dispatch({type:types.USER_LOGIN_FAILURE})
+          navigate("/")
+        })
+              }
 
     return (
         <Box display="flex" justifyContent="center" gap="2rem" >
@@ -55,7 +63,7 @@ const CheckoutPg = () => {
                             <Image src="https://www.kindpng.com/picc/m/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png" alt="" width="45px" />
                              <Box>
                              <Heading   as='h6' size='xs'>{user} </Heading>
-                                <Heading color="blue.300" fontWeight="light" as='h6' size='xs'>Log out  </Heading>
+                                <Heading mt={2} cursor="pointer" onClick={signOutBtn} color="blue.300" fontWeight="light" as='h6' size='xs'>Log out  </Heading>
                                 </Box>   
                         </Box>
                         <Box>

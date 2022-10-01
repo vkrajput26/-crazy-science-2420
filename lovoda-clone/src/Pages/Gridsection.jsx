@@ -3,6 +3,7 @@ import "../Style/Gridsection.css"
 import GridData from "../Data/GridData"
 import { Button } from '@chakra-ui/react'
 const Gridsection = () => {
+    
     const data=GridData
 
     const [noImages,setnoImages]=useState(8)

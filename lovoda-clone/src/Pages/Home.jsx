@@ -1,10 +1,12 @@
 import React from "react";
 import Earrings from "./HomeEarrings";
 import "../Style/Home.css";
-
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
+
+
 const Home = () => {
+ 
   return (
     <>
   

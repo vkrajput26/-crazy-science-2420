@@ -1,0 +1,71 @@
+.btn{
+    position: fixed;
+    left: 88vw;
+    bottom: 3vw;
+    /* height: 1em; */
+    font-size: 1rem;
+  font-weight: bold;
+    z-index: 99;
+    cursor: pointer;
+    width: auto;
+   
+    color: white;
+    /* opacity: 50%; */
+  
+   
+  }
+  .Mobbtn{
+    position: fixed;
+    left: 68vw;
+    bottom: 4vw;
+    /* height: 1em; */
+    font-size: 1rem;
+  font-weight: bold;
+    z-index: 99;
+    cursor: pointer;
+    width: auto;
+   
+    color: white;
+   
+  }
+  
+  .Mobicon{
+    background-color: rgb(68, 89, 79);
+    font-size: 13px;
+    border-radius: 50px;
+    padding: 10px 15px;
+  }
+  .icon{
+    background-color: rgb(68, 89, 79);
+  border-radius: 50px;
+  padding: 17px 21px;
+  }
+  .Tabbtn{
+    position: fixed;
+    left: 85vw;
+    bottom: 3vw;
+    /* height: 1em; */
+    /* font-size: 1rem; */
+  font-weight: bold;
+    z-index: 99;
+    cursor: pointer;
+    width: auto;
+   
+    color: white;
+   
+  }
+  .Tabicon{
+    background-color: rgb(68, 89, 79);
+    font-size: 13px;
+    border-radius: 50px;
+    padding: 15px 20px;
+  }
+  /* .icon:hover{
+    color:orangered;
+    transform: translateY(-5px);
+  }
+  
+  .icon2.hover{
+    color: #0f1624;
+    transform: translateY(-5px);
+  } */

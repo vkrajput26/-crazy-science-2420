@@ -12,6 +12,7 @@ import ShopAll from './ShopAll';
 import Earrings from './Earrings';
 import Necklaces from './Necklaces';
 import Bracelets from './Bracelets';
+import { CustomerReviews } from './CustomerReviews';
 
 const AllRoutes = () => {
     return (
@@ -20,7 +21,7 @@ const AllRoutes = () => {
 
 
    
-  
+<Route path='/CustomerReviews' element={<CustomerReviews /> } />
 
                 <Route path='/' element={<Home/>} />
                 <Route path='/login' element={<Login />} />
@@ -31,6 +32,7 @@ const AllRoutes = () => {
                 <Route path='/payment' element={<Payment />} />
                 <Route path='/newarrivals' element={<Productpage  />} />
                 <Route path='/rings' element={<ShopAll/>} />
+                
                 <Route path='/earrings' element={<Earrings/>} />
                 <Route path='/necklace' element={<Necklaces/>} />
                 <Route path='/bracelet' element={<Bracelets/>} />

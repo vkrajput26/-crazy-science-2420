@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import Mobile from "../Pages/Mobile";
-import Mobile from "../Pages/Mobile";
+// import Mobile from "../Pages/Mobile";
 const Navbar = () => {  
   const [isOpen, setIsOpen] = useState(false);
   const isAuth=useSelector((state)=>state.AuthReducer.isAuth)
