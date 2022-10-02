@@ -23,7 +23,7 @@ export const CartPage = () => {
 const RemoveItem=(item,p)=>{
     let price=totalPrice-p;
     dispatch({type:"DELETE",payload:{item,price}});
-    alert("delete")
+    // alert("delete")
     // console.log()
 
 
@@ -97,15 +97,17 @@ useEffect(() => {
 <Box mt={20}>
     <Flex justifyContent={"right"}>
         <Box w="30%">
-            <Flex justifyContent={"right"} > <Text fontSize='15px'>Subtotal</Text><Text fontSize="15px" ml={8}>${94}.00</Text></Flex>
+            <Flex justifyContent={"right"} > <Text fontSize='15px'>Subtotal</Text><Text fontSize="15px" ml={8}>${totalPrice}.00</Text></Flex>
        <Text align={"right"} fontSize='14px'>or 4 interest-free payments of $23.50 with</Text>
       <Flex mt={2} alignItems={"center"} justifyContent={"right"}> <Badge  borderRadius={"25px"} mr={2} padding="2px 15px 2px 15px" colorScheme={"green"}>After Pay</Badge>
       <InfoOutlineIcon />
       </Flex>
       <Text align={"right"} mt={2} mb={2} fontSize='14px'> Taxes and shipping calculated at checkout</Text>
      <VStack mt={5} spacing={4}>
-        <Flex justifyContent={"center"} alignItems="center" h="50px" w="95%" bg="black" color={"white"}>Check out</Flex>
-        <Flex justifyContent={"center"} alignItems="center" h="50px" w="95%" bg={"#4120AF"}>
+        <Link to="/information" >
+        <Flex justifyContent={"center"} alignItems="center" h="50px" w="95%" bg="black" color={"white"} >
+            Check out</Flex>
+        </Link>   <Flex justifyContent={"center"} alignItems="center" h="50px" w="95%" bg={"#4120AF"}>
             <Image h="50px" w="40%" src={shopPayicon} alt="x" />
         </Flex>
         <Flex justifyContent={"center"} alignItems="center" h="50px" w="95%" bg={"#ffc439"}>

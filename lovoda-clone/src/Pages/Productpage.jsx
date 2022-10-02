@@ -2,10 +2,10 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Box, Flex, Grid, GridItem, Heading, Input, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Select, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import { useEffect,useState } from "react"; 
 import { useDispatch } from "react-redux";
-import { useMediaQuery } from "react-responsive";
 import { Link, useSearchParams } from "react-router-dom";
 import { Pagination } from "../Components/Pagination";
 import "../styles/Productpage.css";
+import { useMediaQuery } from "react-responsive";
 
 const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -62,7 +62,6 @@ const Productpage = () => {
     };
 
     const handleChange = (e) => {
-        // console.log(e.target.value)
         if (e.target.value === "name_ASC") {
             setSort("name")
             setOrder("ASC")
