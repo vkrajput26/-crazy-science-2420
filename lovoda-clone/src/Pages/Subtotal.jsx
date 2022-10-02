@@ -169,7 +169,7 @@ const Subtotal = () => {
           {/* add to cart data */}
           {
            products?.map((item)=>{
-               return <Box key={item.id} display="flex" justifyContent="space-between" >
+               return <Box key={item.id} display="flex" justifyContent="space-between"  >
                        <Image src={item.image} alt='image' width="51px" />
                        <Heading fontWeight="light" size="sm" mt="2rem" > {item.name} </Heading>
                        <Heading fontWeight="light" size="sm" mt="2rem" > ${item.price}.00 </Heading>
