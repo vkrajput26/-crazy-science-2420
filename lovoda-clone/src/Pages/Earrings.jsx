@@ -1,5 +1,5 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Box, Flex, Grid, GridItem, Heading, Input, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Select, Spinner, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Heading, Input, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger, Select, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import { useEffect,useState } from "react"; 
 import { useDispatch } from "react-redux";
 import { Link, useSearchParams } from "react-router-dom";
@@ -149,7 +149,7 @@ const Earrings = () => {
 
         <Tablet> 
         <Box w={"90%"} m="auto" mt={"2rem"} mb={5}>
-            <Heading className="heading3" fontWeight={"400"} fontSize={"4xl"}>Earrings</Heading>
+            <Heading textAlign={"left"} fontWeight={400} size={"lg"}>Earrings</Heading>
             {/* Sorting Starts */}
             <Flex my="1.5rem"  fontSize={"sm"} >
                 <Flex  w="50%" alignItems={"center"} ml="1rem">
@@ -188,7 +188,7 @@ const Earrings = () => {
             {/* Products */}
             <Box mb="2" fontSize={"sm"}>
                 {isLoading && <Flex justify={"center"}><Spinner thickness='4px' speed='0.65s' emptyColor='gray.200' color='blue.500'size='xl'/></Flex>}
-                <Grid className="first-div">
+                <SimpleGrid columns={3} spacing={5}>
                     {data.map((item) => (
                         <Link to={`/ProductpageDetail/${item.id}`}>
                         <GridItem onClick={handleId} className="second-div" key={item.id}>
@@ -198,17 +198,17 @@ const Earrings = () => {
                         </GridItem>
                         </Link>
                     ))}
-                </Grid>
+                </SimpleGrid>
             </Box>
             <Pagination handlePage={handlePage} page={page} />
         </Box>
         </Tablet>
 
         <Mobile>
-        <Box className="main">
-            <Heading className="heading3" fontWeight={"400"} fontSize={"4xl"}>Earrings</Heading>
+        <Box w={"90%"} m="auto" mt={"2rem"} mb={5}>
+            <Heading textAlign={"left"} fontWeight={400} size={"lg"}>Earrings</Heading>
             {/* Sorting Starts */}
-            <Flex my="1.5rem"  fontSize={"sm"} >
+            <Flex mr="1.5rem"  fontSize={"2xs"} >
                 <Flex  w="50%" alignItems={"center"} ml="1rem">
                     <Text ml="-13px" mr="1rem">Filter :</Text>
                     <Popover>
@@ -245,7 +245,7 @@ const Earrings = () => {
             {/* Products */}
             <Box mb="2" fontSize={"sm"}>
                 {isLoading && <Flex justify={"center"}><Spinner thickness='4px' speed='0.65s' emptyColor='gray.200' color='blue.500'size='xl'/></Flex>}
-                <Grid className="first-div">
+                <SimpleGrid columns={2} spacing={5}>
                     {data.map((item) => (
                         <Link to={`/ProductpageDetail/${item.id}`}>
                         <GridItem onClick={handleId} className="second-div" key={item.id}>
@@ -255,7 +255,7 @@ const Earrings = () => {
                         </GridItem>
                         </Link>
                     ))}
-                </Grid>
+                </SimpleGrid>
             </Box>
             <Pagination handlePage={handlePage} page={page} />
         </Box>
