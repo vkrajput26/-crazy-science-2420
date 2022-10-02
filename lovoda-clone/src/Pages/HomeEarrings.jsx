@@ -3,7 +3,7 @@ import "../Style/HomeEarrings.css";
 import { loadProduct } from "../Redux/Appreducer/action";
 import { useDispatch, useSelector } from "react-redux";
 import Gridsection from "./Gridsection";
-
+import {Link} from "react-router-dom";
 const Earrings = () => {
   let dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
@@ -21,7 +21,7 @@ const Earrings = () => {
               <>
                 <div className="product_card" key={index}>
                   <div>
-                    <img
+                 <Link to={`/ProductpageDetail/${item.id}`}>   <img
                       style={{ cursor: "pointer" }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.src = `${item.hoverImage}`)
@@ -31,7 +31,7 @@ const Earrings = () => {
                       }
                       src={item.image}
                       alt=""
-                    />
+                    /></Link>
 
                     <p>{item.name}</p>
                     <p style={{ fontWeight: "bold" }}>$ {item.price}.00</p>
