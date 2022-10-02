@@ -33,7 +33,7 @@ const navigate=useNavigate()
     }, []);
 const addTocart=()=>{
     dispatch({type:"ADD_TO_CART",payload:{data,quantity}})
-    alert("added");
+    // alert("added");
     navigate("/cartpage")
 }
     return(
