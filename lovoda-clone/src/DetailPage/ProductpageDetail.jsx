@@ -49,13 +49,12 @@ const DetailedEarrings = () => {
         })
     }, []);
 
-    const addTocart=()=>{
-        dispatch({type:"ADD_TO_CART",payload:{data,quantity}})
-        alert("added");
-        navigate("/cartpage")
-    }
-    
-    return(
+const addTocart=()=>{
+    dispatch({type:"ADD_TO_CART",payload:{data,quantity}})
+    // alert("added");
+    navigate("/cartpage")
+}
+return(
         <>
         <Desktop>
         <Box marginTop={"30px"}>

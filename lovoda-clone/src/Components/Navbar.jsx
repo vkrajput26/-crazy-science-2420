@@ -10,6 +10,8 @@ const Navbar = () => {
   const isAuth=useSelector((state)=>state.AuthReducer.isAuth)
         console.log("amol",isAuth)
 
+        const tquantity =useSelector(state=>state.CartReducer.totalQty)
+        console.log(tquantity)
   return (
     <>
       <div className="Top_Heading">
@@ -61,9 +63,10 @@ const Navbar = () => {
                 <i className="fi fi-rr-user"></i>
               </div>
             </Link>
-            <div>
-              <i className="fi fi-rr-shopping-bag"></i>
-            </div>
+          <Link to="/cartpage"> <div>
+              <i  className="fi fi-rr-shopping-bag">  <div className="SpanBox"><span >{tquantity}</span></div></i>
+              
+            </div></Link> 
           </div>
         </div>
       </div>

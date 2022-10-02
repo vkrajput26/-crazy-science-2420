@@ -30,15 +30,26 @@ function PlacementExample() {
               {" "}
               <p>Home</p>
             </Link>
-            <p>New</p>
-            <p>Shop All</p>
-            <p>Earing</p>
-            <p>Necklaces</p>
-            <p>Bracelets</p>
-            <p>Rings</p>
+            <Link to="/newarrivals">
+              <div>New</div>
+            </Link>
+            <Link to="/ShopAll">
+              <div>Shop All</div>
+            </Link>
+            <Link to="/earrings">
+              <div>Earrings</div>
+            </Link>
+            <Link to="/necklaces">
+              <div>Necklaces</div>
+            </Link>
+            <Link to="/bracelets">
+              <div>Bracelets</div>
+            </Link>
+            <Link to="/rings">
+              <div>Rings</div>
+            </Link>
             <Link to="/shopsocial">
-              {" "}
-              <p>Shop social</p>{" "}
+              <div>Shop Social</div>
             </Link>
           </DrawerBody>
         </DrawerContent>
