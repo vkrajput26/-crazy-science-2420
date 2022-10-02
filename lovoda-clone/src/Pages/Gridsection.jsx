@@ -4,15 +4,11 @@ import React, { useState, useEffect } from "react";
 import "../Style/Gridsection.css";
 
 const Gridsection = () => {
-
-
-
   const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://safe-badlands-27546.herokuapp.com/Gridsection")
-      .then((res) => {
+      .get("https://safe-badlands-27546.herokuapp.com/Gridsection").then((res) => {
         setData(res.data);
       })
       .catch((Err) => {
@@ -27,7 +23,6 @@ const Gridsection = () => {
   const handleLoad = () => {
     setnoImages(noImages + noImages);
   };
-
 
   return (
     <>

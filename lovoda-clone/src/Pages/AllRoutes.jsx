@@ -21,6 +21,7 @@ import DetailedEarrings from "../DetailPage/ProductpageDetail";
 import { CartPage } from "./CartPage";
 
 const AllRoutes = () => {
+
   return (
     <div>
       <Routes>
@@ -45,6 +46,7 @@ const AllRoutes = () => {
       </Routes>
     </div>
   );
+
 };
 
 export default AllRoutes;
