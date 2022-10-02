@@ -156,7 +156,7 @@ const Bracelets = () => {
                     <Text ml="-13px" mr="1rem">Filter :</Text>
                     <Popover>
                     <PopoverTrigger>
-                        <Text _hover={{cursor:"pointer"}}>Price<ChevronDownIcon /> </Text>
+                        <Text _hover={{cursor:"pointer"}}>Price<ChevronDownIcon /></Text>
                     </PopoverTrigger>
                     <PopoverContent>
                         <PopoverArrow />
