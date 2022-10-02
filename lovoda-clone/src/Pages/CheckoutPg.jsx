@@ -125,9 +125,11 @@ const CheckoutPg = () => {
         
 
         <Box mt="1rem" display="flex" justifyContent="space-between" >
+        <Link to="/cartpage" > 
         <Button fontSize="sm" colorScheme='white' color="blue.300" variant='solid'>
                {"<"} Return to cart
         </Button>
+        </Link>
         
         <Link to="/shipping" >
         <Button fontSize="sm" colorScheme='black' backgroundColor="black" variant='solid'>
@@ -242,10 +244,12 @@ const CheckoutPg = () => {
         
 
         <Box mt="1rem" display="flex" justifyContent="space-between" >
+
+            <Link to="/cartpage" > 
         <Button fontSize="sm" colorScheme='white' color="blue.300" variant='solid'>
                {"<"} Return to cart
         </Button>
-        
+        </Link>
         <Link to="/shipping" >
         <Button fontSize="sm" colorScheme='black' backgroundColor="black" variant='solid'>
                 Continue to shipping
@@ -364,9 +368,11 @@ const CheckoutPg = () => {
                 Continue to shipping
         </Button>
         </Link>
+        <Link to="/cartpage" >
         <Button fontSize="sm" colorScheme='white' color="blue.300" variant='solid'>
                {"<"} Return to cart
         </Button>
+        </Link>
         
         </Box>
 

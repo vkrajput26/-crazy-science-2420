@@ -10,6 +10,7 @@ import {Input,Box,Button, Breadcrumb,
 import Subtotal from './Subtotal';
 
 import { useMediaQuery } from "react-responsive";
+import { useSelector } from 'react-redux';
 
 const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -31,7 +32,7 @@ const Desktop = ({ children }) => {
 const Payment = () => {
  
   const toast = useToast()
-
+  const user=useSelector((state)=>state.AuthReducer.user)
  
 
     return (
@@ -71,7 +72,7 @@ const Payment = () => {
            <Box border="1px solid grey" mt="2rem"  mb="2rem">
             <Box display="flex" justifyContent="space-between" mt="0.6rem" mb="0.6rem" pl="0.5rem" pr="0.5rem" borderRadius="12px" >
                 <Heading fontWeight="light" as="h6" size="sm" >Contact</Heading>
-                <Heading fontWeight="light" as="h6" size="sm" >email</Heading>
+                <Heading fontWeight="light" as="h6" size="sm" >{user}</Heading>
                 <Button fontSize="sm" color="blue.400" backgroundColor="white" height="auto" >Change</Button>
             </Box>
 
@@ -289,7 +290,7 @@ const Payment = () => {
            <Box border="1px solid grey" mt="2rem"  mb="2rem">
             <Box display="flex" justifyContent="space-between" mt="0.6rem" mb="0.6rem" pl="0.5rem" pr="0.5rem" borderRadius="12px" >
                 <Heading fontWeight="light" as="h6" size="sm" >Contact</Heading>
-                <Heading fontWeight="light" as="h6" size="sm" >email</Heading>
+                <Heading fontWeight="light" as="h6" size="sm" >{user}</Heading>
                 <Button fontSize="sm" color="blue.400" backgroundColor="white" height="auto" >Change</Button>
             </Box>
 
@@ -507,7 +508,7 @@ const Payment = () => {
            <Box border="1px solid grey" mt="2rem"  mb="2rem">
             <Box display="flex" justifyContent="space-between" mt="0.6rem" mb="0.6rem" pl="0.5rem" pr="0.5rem" borderRadius="12px" >
                 <Heading fontWeight="light" as="h6" size="sm" >Contact</Heading>
-                <Heading fontWeight="light" as="h6" size="sm" >email</Heading>
+                <Heading fontWeight="light" as="h6" size="sm" >{user}</Heading>
                 <Button fontSize="sm" color="blue.400" backgroundColor="white" height="auto" >Change</Button>
             </Box>
 
