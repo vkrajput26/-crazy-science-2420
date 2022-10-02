@@ -256,9 +256,9 @@ const DetailedEarrings = () => {
                         </Box>
                     </Box>
 
-                <Box mt={"30px"}>
+                <Box mt={"20px"}>
                     <Box >
-                        <Text mt={"3rem"} textAlign={"left"} fontSize={"18px"}>Free Shipping</Text>
+                        <Text mt={"1rem"} textAlign={"left"} fontSize={"18px"}>Free Shipping</Text>
                         <Text marginBottom={10} mt={"0.5rem"}  textAlign={"left"} fontSize={"15px"}>Free shipping for orders over $75! Only applicable for US.</Text>
                     </Box>
                 </Box>
