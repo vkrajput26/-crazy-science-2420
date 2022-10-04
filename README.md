@@ -1,6 +1,6 @@
 # LOVODA Clone
 LOVODA is a women's fashion brand for the newest & trending fashion accessories and online shop that offered high quality products at an affordable price.
-We have built the exact footer as it is on the original website.
+We have built the exact website clone as it is on the original website.
 
 # Details:-
 - Blog Link :- https://medium.com/@shiprapal97/lovoda-clone-project-7da32253a0de
