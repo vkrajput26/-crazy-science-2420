@@ -21,7 +21,6 @@ import DetailedEarrings from "../DetailPage/ProductpageDetail";
 import { CartPage } from "./CartPage";
 
 const AllRoutes = () => {
-
   return (
     <div>
       <Routes>
@@ -35,7 +34,7 @@ const AllRoutes = () => {
         <Route path="/shipping" element={<Shipping />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/newarrivals" element={<Productpage />} />
-        {/* <Route path="/rings" element={<ShopAll />} /> */}
+
         <Route path="/ShopAll" element={<ShopAll />} />
         <Route path="/earrings" element={<Earrings />} />
         <Route path="/necklaces" element={<Necklaces />} />
@@ -46,7 +45,6 @@ const AllRoutes = () => {
       </Routes>
     </div>
   );
-
 };
 
 export default AllRoutes;

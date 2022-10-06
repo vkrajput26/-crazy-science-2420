@@ -40,8 +40,8 @@ const Subtotal = () => {
  
         // adding price
         const val=products.reduce((amount,item)=> (item.price)+amount, 0)
-   
-        const totalValue=val+7;
+    const totalPrice=useSelector(state=>state.CartReducer.totalPrice)
+        const totalValue=totalPrice+7;
 
         var discount=totalValue
         discount=discount-Math.floor(discount*(30/100))
@@ -85,7 +85,7 @@ const Subtotal = () => {
                <Box mt="2rem"  mb="1.2rem"  >
                      <Box display="flex" justifyContent="space-between" mt="0.5rem"  >
                        <Heading fontWeight="light" size="xs" >Subtotal</Heading>
-                       <Heading fontWeight="light" size="xs" >$ {val}.00</Heading>
+                       <Heading fontWeight="light" size="xs" >$ {totalPrice}.00</Heading>
                        </Box>    
 
                        <Box display="flex" justifyContent="space-between" mt="0.5rem"  >
@@ -139,7 +139,7 @@ const Subtotal = () => {
                <Box mt="2rem"  mb="1.2rem"  >
                      <Box display="flex" justifyContent="space-between" mt="0.5rem"  >
                        <Heading fontWeight="light" size="xs" >Subtotal</Heading>
-                       <Heading fontWeight="light" size="xs" >$ {val}.00</Heading>
+                       <Heading fontWeight="light" size="xs" >$ {totalPrice}.00</Heading>
                        </Box>    
 
                        <Box display="flex" justifyContent="space-between" mt="0.5rem"  >
@@ -191,7 +191,7 @@ const Subtotal = () => {
                <Box mt="2rem"  mb="1.2rem"  >
                      <Box display="flex" justifyContent="space-between" mt="0.5rem"  >
                        <Heading fontWeight="light" size="xs" >Subtotal</Heading>
-                       <Heading fontWeight="light" size="xs" >$ {val}.00</Heading>
+                       <Heading fontWeight="light" size="xs" >$ {totalPrice}.00</Heading>
                        </Box>    
 
                        <Box display="flex" justifyContent="space-between" mt="0.5rem"  >
