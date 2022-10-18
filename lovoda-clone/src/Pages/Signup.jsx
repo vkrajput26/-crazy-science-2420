@@ -72,7 +72,7 @@ if(Fname===""||Lname===""|| email===""||password===""){
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    console.log(errorMessage)
+    // console.log(errorMessage)
     toast({
               title: `${errorMessage}  `,
               status: "error",
@@ -93,7 +93,7 @@ const faceBookLogin = () => {
     .then((userCredential) => {
       // Signed in
       const userDetails = userCredential.user;
-      console.log(userDetails);
+      // console.log(userDetails);
       toast({
         title: `Your Successfully Logged in,your current email is ${userDetails.email}  `,
         status: "success",
@@ -110,7 +110,7 @@ const faceBookLogin = () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorMessage);
+      // console.log(errorMessage);
       toast({
         title: `${errorMessage}  `,
         status: "error",
@@ -129,7 +129,7 @@ const signInWithGoogle = async () => {
     .then((userCredential) => {
       // Signed in
       const userDetails = userCredential.user;
-      console.log(userDetails);
+      // console.log(userDetails);
       toast({
         title: `Your Successfully Logged in,your current email is ${userDetails.email}  `,
         status: "success",
@@ -146,7 +146,7 @@ const signInWithGoogle = async () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorMessage);
+      // console.log(errorMessage);
       toast({
         title: `${errorMessage}  `,
         status: "error",

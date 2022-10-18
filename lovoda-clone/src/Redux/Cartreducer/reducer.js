@@ -70,7 +70,11 @@ export const reducer =(state=initialState, action)=>{
                             return state
                         }
                   
-
+case "PAYMENT_DONE":
+    return{
+        ...state,
+        products:[],totalQty:0,totalPrice:0
+    }
 
             case "CART":
             return{

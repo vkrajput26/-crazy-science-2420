@@ -30,7 +30,7 @@ const Desktop = ({ children }) => {
 
 const DetailedEarrings = () => {
     const [data, setData] = useState({});
-    console.log(data);
+  
     const {id}=useParams();
     const dispatch=useDispatch();
     const [quantity, setQuantity] = useState(1);
@@ -39,7 +39,7 @@ const DetailedEarrings = () => {
     const {cart }= useSelector(state=>
    { return{cart:state.CartReducer.cart}}
     );
-   console.log("vk")
+
     // console.log(    "cart dtata",products,"count,",totalQty);
 
     useEffect(() => {

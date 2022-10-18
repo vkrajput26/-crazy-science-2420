@@ -14,11 +14,10 @@ const Shopsocial = () => {
         setData(res.data);
       })
       .catch((Err) => {
-        console.log(Error);
+        // console.log(Error);
       });
   }, []);
 
-  console.log(data);
 
   const [noImages, setnoImages] = useState(8);
 

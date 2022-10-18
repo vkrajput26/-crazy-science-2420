@@ -21,7 +21,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Subtotal from "./Subtotal";
 
 import { useMediaQuery } from "react-responsive";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -45,13 +45,13 @@ const Payment = () => {
   const user = useSelector((state) => state.AuthReducer.user);
 const [home,setHome]=useState(false)
   const navigate=useNavigate()
+const dispatch=useDispatch();
 
   const handleCLick=()=>{
       setHome(true)
-
+      dispatch({type:"PAYMENT_DONE"})
     toast({
         title: "Payment Done Successfully",
-
         status: "success",
         duration: 4000,
         isClosable: true,

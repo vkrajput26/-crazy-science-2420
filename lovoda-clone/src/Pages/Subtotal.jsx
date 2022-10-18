@@ -32,10 +32,10 @@ const Subtotal = () => {
     
    
    
-     console.log("subtotal")
+    //  console.log("subtotal")
      
      const products=useSelector((state)=>state.CartReducer.products)
-     console.log("products",products)
+    //  console.log("products",products)
    
  
         // adding price

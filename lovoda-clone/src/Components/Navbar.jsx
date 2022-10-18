@@ -8,10 +8,10 @@ import Search from "../Pages/Search";
 const Navbar = () => {  
   const [isOpen, setIsOpen] = useState(false);
   const isAuth=useSelector((state)=>state.AuthReducer.isAuth)
-        console.log("amol",isAuth)
+    
 
         const tquantity =useSelector(state=>state.CartReducer.totalQty)
-        console.log(tquantity)
+   
   return (
     <>
       <div className="Top_Heading">

@@ -35,9 +35,6 @@ export const CartPage = () => {
          );
          const [data,setData]=useState([])
 
-         console.log("products",products)
-         console.log("totalQty",totalQty)
-         console.log("totalPrice",totalPrice)
 
 const RemoveItem=(item,p)=>{
     let price=totalPrice-p;

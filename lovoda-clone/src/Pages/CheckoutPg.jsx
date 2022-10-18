@@ -47,8 +47,7 @@ const CheckoutPg = () => {
 
    
     const totalPrice=useSelector((state)=>state.CartReducer.totalPrice)
-    console.log("totalPrice",totalPrice)
-
+ 
 
     return (
         <>

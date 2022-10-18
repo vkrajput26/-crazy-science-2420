@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 const Earrings = () => {
   let dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
-  console.log("Inside PRODUCT PAGE", products);
+ 
   useEffect(() => {
     dispatch(loadProduct());
   }, [dispatch]);

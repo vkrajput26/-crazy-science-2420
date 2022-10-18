@@ -71,7 +71,7 @@ export const Login = () => {
         .then((userCredential) => {
           // Signed in
           const userDetails = userCredential.user;
-          console.log(userDetails);
+         
           toast({
             title: `Your Successfully Logged in,your current email is ${userDetails.email}  `,
             status: "success",
@@ -88,7 +88,7 @@ export const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          console.log(errorMessage);
+       
           toast({
             title: `${errorMessage}  `,
             status: "error",
@@ -108,7 +108,7 @@ export const Login = () => {
       .then((userCredential) => {
         // Signed in
         const userDetails = userCredential.user;
-        console.log(userDetails);
+      
         toast({
           title: `Your Successfully Logged in,your current email is ${userDetails.email}  `,
           status: "success",
@@ -125,7 +125,7 @@ export const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
+       
         toast({
           title: `${errorMessage}  `,
           status: "error",
@@ -175,7 +175,7 @@ export const Login = () => {
       .then((userCredential) => {
         // Signed in
         const userDetails = userCredential.user;
-        console.log(userDetails);
+       
         toast({
           title: `Your Successfully Logged in,your current email is ${userDetails.email}  `,
           status: "success",
@@ -192,7 +192,7 @@ export const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
+    
         toast({
           title: `${errorMessage}  `,
           status: "error",

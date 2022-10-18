@@ -46,10 +46,10 @@ export const WishList = () => {
   const [coupon, setCoupon] = useState();
   const [valueChange, setValueChange] = useState(true);
 
-  console.log("subtotal");
+  // console.log("subtotal");
 
   const products = useSelector((state) => state.CartReducer.products);
-  console.log("products", products);
+  // console.log("products", products);
 
   // adding price
   const val = products.reduce((amount, item) => item.price + amount, 0);
