@@ -1,3 +1,5 @@
+![responsive](https://user-images.githubusercontent.com/103682371/199397883-aa2ad457-ef9e-436b-95b0-38a5e9e5204a.jpg)
+
 # LOVODA Clone
 LOVODA is a women's fashion brand for the newest & trending fashion accessories and online shop that offered high quality products at an affordable price.
 We have built the exact website clone as it is on the original website.
@@ -26,6 +28,3 @@ We have built the exact website clone as it is on the original website.
 - All Product pages and Product Detail page are designed & functioned by Shipra.
 - Cart page, Checkout page and Payment page are designed by Vivek.
 
-# Responsiveness
-
-![responsive](https://user-images.githubusercontent.com/103682371/199397883-aa2ad457-ef9e-436b-95b0-38a5e9e5204a.jpg)
