@@ -25,3 +25,7 @@ We have built the exact website clone as it is on the original website.
 - Login and Signup page using firebase are designed & functioned by Amol.
 - All Product pages and Product Detail page are designed & functioned by Shipra.
 - Cart page, Checkout page and Payment page are designed by Vivek.
+
+# Responsiveness
+
+![responsive](https://user-images.githubusercontent.com/103682371/199397883-aa2ad457-ef9e-436b-95b0-38a5e9e5204a.jpg)
