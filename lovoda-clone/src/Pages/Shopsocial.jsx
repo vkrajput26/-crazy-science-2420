@@ -1,23 +1,25 @@
+
+
 import { Button } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../Style/Gridsection.css";
-
+import GridData from "../Data/GridData"
 
 const Shopsocial = () => {
   const [data, setData] = useState([]);
-
+console.log("vk",GridData)
   useEffect(() => {
     axios
-      .get("https://safe-badlands-27546.herokuapp.com/Gridsection")
-      .then((res) => {
+      .get("https://safe-badlands-27546.herokuapp.com/Gridsection").then((res) => {
         setData(res.data);
       })
       .catch((Err) => {
-        // console.log(Error);
+     
       });
   }, []);
 
+  // console.log(data);
 
   const [noImages, setnoImages] = useState(8);
 
@@ -29,8 +31,8 @@ const Shopsocial = () => {
     <>
       <p>Follow us on instagram @lovodashop</p>
       <div className="Grid_BOX">
-        {data &&
-          data.splice(0, noImages).map((item, index) => {
+        {GridData &&
+          GridData.map((item, index) => {
             return (
               <div key={index}>
                 <a href={item.srchref}>
@@ -41,15 +43,24 @@ const Shopsocial = () => {
             );
           })}
       </div>
-      <Button
+      {/* <Button
         className="gridBtn"
         disabled={noImages >= 25}
         onClick={handleLoad}
       >
         Load More
-      </Button>
+      </Button> */}
     </>
   );
 };
 
 export default Shopsocial;
+
+
+
+
+
+
+
+
+
