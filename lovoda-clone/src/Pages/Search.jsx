@@ -10,9 +10,18 @@ import {
   useDisclosure,
   Input,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 const Search = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement, setPlacement] = React.useState("top");
+  const navigate=useNavigate()
+  const  handleKeyPress=(event)=>{
+    if(event.key=="Enter")
+    {
+
+     return   navigate("/rings")
+    }
+}
   return (
     <>
       <RadioGroup defaultValue={placement} onChange={setPlacement}></RadioGroup>
@@ -24,7 +33,7 @@ const Search = () => {
         <DrawerContent>
           <DrawerBody className="DrwBody">
             <div className="InputDiv">
-              <Input className="InputBox" type="text" placeholder="Search..." />
+              <Input className="InputBox" type="text" placeholder="Search..." onKeyPress={handleKeyPress} />
               <i onClick={onClose} className="fi fi-rr-cross-small"></i>
             </div>
           </DrawerBody>
