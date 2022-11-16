@@ -19,7 +19,7 @@ console.log("vk",GridData)
 
   // console.log(data);
 
-  const [noImages, setnoImages] = useState(8);
+  const [noImages, setnoImages] = useState(4);
 
   const handleLoad = () => {
     setnoImages(noImages + noImages);
@@ -41,13 +41,13 @@ console.log("vk",GridData)
             );
           })}
       </div>
-      {/* <Button
+      <Button
         className="gridBtn"
         disabled={noImages >= 25}
         onClick={handleLoad}
       >
         Load More
-      </Button> */}
+      </Button>
     </>
   );
 };

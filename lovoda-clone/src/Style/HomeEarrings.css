@@ -17,6 +17,9 @@
  
   gap: 10px;
 }
+.product-gallery::-webkit-scrollbar{
+display: none;
+}
 
 .product_card img {
   /* width: 250px; */
