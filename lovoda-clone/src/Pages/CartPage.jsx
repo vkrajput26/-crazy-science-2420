@@ -49,7 +49,7 @@ const increment=(item)=>{
 }
 useEffect(() => {
    
-    fetch(`https://lovodaapi.herokuapp.com/api/earrings?_page=1&_limit=4`)
+    fetch(`https://lovodaapi.onrender.com/earrings?_page=1&_limit=4`)
         .then((res) => res.json())
         .then((res)=>{
             setData(res) ;

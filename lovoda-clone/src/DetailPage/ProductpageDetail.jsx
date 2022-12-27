@@ -43,7 +43,7 @@ const DetailedEarrings = () => {
     // console.log(    "cart dtata",products,"count,",totalQty);
 
     useEffect(() => {
-        axios.get(`https://lovodaapi.herokuapp.com/api/${cart}/${id}`)
+        axios.get(`https://lovodaapi.onrender.com/${cart}/${id}`)
             .then((res) => {
             setData(res.data) 
         })

@@ -43,7 +43,7 @@ const Necklaces = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`https://lovodaapi.herokuapp.com/api/necklace?_page=${page}&_limit=16&_sort=${sort}&_order=${order}&price_gte=${greater}&price_lte=${less}`)
+        fetch(`https://lovodaapi.onrender.com/necklace?_page=${page}&_limit=16&_sort=${sort}&_order=${order}&price_gte=${greater}&price_lte=${less}`)
             .then((res) => res.json())
             .then((res)=>{
                 setData(res) ;

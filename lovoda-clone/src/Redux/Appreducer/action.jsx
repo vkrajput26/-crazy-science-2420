@@ -15,7 +15,7 @@ const getProduct = (products) => ({
 
 export const loadProduct = () => {
     return function (dispatch) {
-        axios.get(`https://lovodaapi.herokuapp.com/api/earrings`).then(res => {
+        axios.get(`https://lovodaapi.onrender.com/earrings`).then(res => {
             // console.log("RESPONSE", res)
             dispatch(getProduct(res.data))
             dispatch({type: "CART", payload: "earrings"})
